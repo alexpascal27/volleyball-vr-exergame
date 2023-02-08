@@ -10,7 +10,8 @@ public class CartBallSpawner : MonoBehaviour
     [SerializeField] private GameObject objectToSpawn;
     [SerializeField] private float timeInBetweenCheck = 2.0f;
     [SerializeField] private float raycastLength =  2.0f;
-    
+    [SerializeField] private bool conditionalOnRaycast = true;
+
     private RaycastHit hit;
     private float currTimeCounter;
     private Vector3 spawnPoint;
@@ -30,7 +31,7 @@ public class CartBallSpawner : MonoBehaviour
             bool hitSomething = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit,
                 raycastLength);
             // if not hit, spawn
-            if (!hitSomething)
+            if (!hitSomething || !conditionalOnRaycast)
             {
                 Instantiate(objectToSpawn, spawnPoint, transform.rotation);
             }
