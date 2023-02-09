@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 517199517}
   m_Layer: 0
   m_Name: net
-  m_TagString: Untagged
+  m_TagString: Net
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1429,6 +1429,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 5267061180023506816, guid: a1cf43ccee7e50148a64881d6bf6777b,
+    type: 3}
+  targetHighlightPrefab: {fileID: 4139635946821059049, guid: 7fd5b3ae340ef01408c4d17d4a47414e,
     type: 3}
   percentageOfMisses: 0
   outOfCourtRange: 5
@@ -2547,7 +2549,7 @@ GameObject:
   - component: {fileID: 1499572285}
   m_Layer: 0
   m_Name: long2
-  m_TagString: Untagged
+  m_TagString: Court
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2838,7 +2840,7 @@ GameObject:
   - component: {fileID: 1693062860}
   m_Layer: 0
   m_Name: short2
-  m_TagString: Untagged
+  m_TagString: Court
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3424,7 +3426,7 @@ GameObject:
   - component: {fileID: 1912526543}
   m_Layer: 0
   m_Name: div1 (1)
-  m_TagString: Untagged
+  m_TagString: Court
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
