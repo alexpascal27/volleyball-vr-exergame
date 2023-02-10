@@ -2,18 +2,22 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class BallHitController : MonoBehaviour
 {
     [SerializeField] public GameObject linePrefab;
     // we want to apply a force upon a collision with ball
     [SerializeField] private float forceScale = 100f;
+    
+    [SerializeField] public float yHitOffset = 3f;
+    
     [SerializeField] public Collider[] collidersToDisable;
     [SerializeField] public Collider[] collidersToEnable;
     
-    private Vector3 knockbackDirection;
+    private Vector3 reflectionDirection;
 
-    private Rigidbody rigidbody;
+    private Rigidbody controllerRigidbody;
 
 
     // This means on any collision with the ball it adds a forward force
@@ -33,8 +37,9 @@ public class BallHitController : MonoBehaviour
 
     private void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
-
+        controllerRigidbody = GetComponent<Rigidbody>();
+        
+        // Enable and Disable Colliders 
         foreach (Collider colliderToDisable in collidersToDisable)
         {
             colliderToDisable.enabled = false;
@@ -48,27 +53,33 @@ public class BallHitController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        String tag = collision.gameObject.tag;
-        if (tag == "Ball")
+        GameObject ballPrefab = collision.gameObject;
+        String collisionTag = ballPrefab.tag;
+        if (collisionTag == "Ball")
         {
             //Debug.Log("TouchingBall");
-            Debug.Log(rigidbody==null ? "rigidbody null" : "rigidbody defined|Position = " + rigidbody.position);
-            
             // find direction of knockback
             ContactPoint contact = collision.contacts[0];
-            knockbackDirection = contact.point - transform.position;
-            knockbackDirection = knockbackDirection.normalized;
-            
+            reflectionDirection = controllerRigidbody.velocity.normalized;
+
             // spawn line
-            linePrefab.transform.LookAt(knockbackDirection);
+            linePrefab.transform.LookAt(reflectionDirection);
             Instantiate(linePrefab, contact.point, linePrefab.transform.rotation);
             
-            //ApplyKnockBack();
+            ApplyHit(ballPrefab);
         }
     }
 
-    private void ApplyKnockBack()
+    // TODO: Get controller velocity to make hit power depend on controller velocity
+    // This is an estimation on the max speed that an average person might reach while moving the controller
+    // - used to calculate ratio of currSpeed/maxSpeed
+    private void ApplyHit(GameObject ballPrefab)
     {
-        rigidbody.AddForce(knockbackDirection * forceScale, ForceMode.Impulse);
+        //Vector3 target = new Vector3(reflectionDirection.x, reflectionDirection.y + yHitOffset, reflectionDirection.z);
+        //ballPrefab.transform.LookAt(target);
+        Rigidbody ballRigidbody = ballPrefab.GetComponent<Rigidbody>();
+        Vector3 prevVelocity = ballRigidbody.velocity;
+        prevVelocity = new Vector3(prevVelocity.x, prevVelocity.y + yHitOffset, prevVelocity.z);
+        ballRigidbody.velocity = prevVelocity * forceScale;
     }
 }
