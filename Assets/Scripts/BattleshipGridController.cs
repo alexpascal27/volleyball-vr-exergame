@@ -47,14 +47,14 @@ public class BattleshipGridController : MonoBehaviour
             bool placed = false;
             while (!placed)
             {
-                int x = Random.Range(0, grid.GetLength(0));
-                int y = Random.Range(0, grid.GetLength(1));
+                int y = Random.Range(0, grid.GetLength(0));
+                int x = Random.Range(0, grid.GetLength(1));
                 bool isHorizontal = (Random.Range(0, 2) == 0);
-                if (!IsOccupied(x, y, isHorizontal, i))
+                if (!IsOccupied(y, x, isHorizontal, i))
                 {
                     //Debug.Log(shipNames[i] + ": (" + x + ", " + y + ")");
-                    PlaceShip(x, y, isHorizontal, i);
-                    InstantiateShipPrefab(x, y, isHorizontal, i);
+                    PlaceShip(y, x, isHorizontal, i);
+                    InstantiateShipPrefab(y, x, isHorizontal, i);
                     placed = true;
                 }
             }
@@ -79,23 +79,23 @@ public class BattleshipGridController : MonoBehaviour
     }
 
     // Take (x, y) as origin and work out if x + shipSizeX < gridLength AND y + shipSizeY < gridLength
-    bool IsValidPlacement(int x, int y, bool isHorizontal, int shipIndex)
+    bool IsValidPlacement(int y, int x, bool isHorizontal, int shipIndex)
     {
-        int shipSizeX = GetShipSizeXAndY(isHorizontal, shipIndex).Item1;
-        int shipSizeY = GetShipSizeXAndY(isHorizontal, shipIndex).Item2;
-        return x + shipSizeX - 1 < grid.GetLength(0) && y + shipSizeY - 1 < grid.GetLength(1);
+        int shipSizeY = GetShipSizeYAndX(isHorizontal, shipIndex).Item1;
+        int shipSizeX = GetShipSizeYAndX(isHorizontal, shipIndex).Item2;
+        return x + shipSizeX - 1 < grid.GetLength(1) && y + shipSizeY - 1 < grid.GetLength(0);
     }
 
-    bool IsOccupied(int x, int y, bool isHorizontal, int shipIndex)
+    bool IsOccupied(int y, int x, bool isHorizontal, int shipIndex)
     {
         // if not valid to put on board no need to go further, so occupied
-        if (!IsValidPlacement(x, y, isHorizontal, shipIndex)) return true;
-        int shipSizeX = GetShipSizeXAndY(isHorizontal, shipIndex).Item1;
-        int shipSizeY = GetShipSizeXAndY(isHorizontal, shipIndex).Item2;
+        if (!IsValidPlacement(y, x, isHorizontal, shipIndex)) return true;
+        int shipSizeY = GetShipSizeYAndX(isHorizontal, shipIndex).Item1;
+        int shipSizeX = GetShipSizeYAndX(isHorizontal, shipIndex).Item2;
         
-        for (int i = x; i < shipSizeX+x; i++)
+        for (int i = y; i < shipSizeY+y; i++)
         {
-            for (int j = y; j < shipSizeY+y; j++)
+            for (int j = x; j < shipSizeX+x; j++)
             {
                 // occupied if string not empty
                 if (!string.IsNullOrEmpty(grid[i, j])) return true;
@@ -105,42 +105,42 @@ public class BattleshipGridController : MonoBehaviour
         return false;
     }
 
-    void PlaceShip(int x, int y, bool isHorizontal, int shipIndex)
+    void PlaceShip(int y, int x, bool isHorizontal, int shipIndex)
     {
-        int shipSizeX = GetShipSizeXAndY(isHorizontal, shipIndex).Item1;
-        int shipSizeY = GetShipSizeXAndY(isHorizontal, shipIndex).Item2;
+        int shipSizeY = GetShipSizeYAndX(isHorizontal, shipIndex).Item1;
+        int shipSizeX = GetShipSizeYAndX(isHorizontal, shipIndex).Item2;
         
-        for (int i = 0; i < shipSizeX; i++)
+        for (int i = 0; i < shipSizeY; i++)
         {
-            for (int j = 0; j < shipSizeY; j++)
+            for (int j = 0; j < shipSizeX; j++)
             {
-                grid[i+x, j+y] = shipNames[shipIndex];
+                grid[i+y, j+x] = shipNames[shipIndex];
             }
         }
     }
 
-    Tuple<int, int> GetShipSizeXAndY(bool isHorizontal, int shipIndex)
+    Tuple<int, int> GetShipSizeYAndX(bool isHorizontal, int shipIndex)
     {
         int shipSizeX, shipSizeY;
         if (isHorizontal)
         {
-            shipSizeX = shipSizes[shipIndex].Item1;
-            shipSizeY = shipSizes[shipIndex].Item2;
-        }
-        else
-        {
             shipSizeY = shipSizes[shipIndex].Item1;
             shipSizeX = shipSizes[shipIndex].Item2;
         }
+        else
+        {
+            shipSizeX = shipSizes[shipIndex].Item1;
+            shipSizeY = shipSizes[shipIndex].Item2;
+        }
 
-        return new Tuple<int, int>(shipSizeX, shipSizeY);
+        return new Tuple<int, int>(shipSizeY, shipSizeX);
     }
 
-    // TODO: complete method to spawn ships
-    void InstantiateShipPrefab(int z, int x, bool isHorizontal, int shipIndex)
+    
+   void InstantiateShipPrefab(int z, int x, bool isHorizontal, int shipIndex)
     {
-        float shipSizeZ = GetShipSizeXAndY(isHorizontal, shipIndex).Item1;
-        float shipSizeX = GetShipSizeXAndY(isHorizontal, shipIndex).Item2;
+        float shipSizeZ = GetShipSizeYAndX(isHorizontal, shipIndex).Item1;
+        float shipSizeX = GetShipSizeYAndX(isHorizontal, shipIndex).Item2;
         // Find origin point by doing (x + shipSizeX/2, z + shipSizeZ/2)
         float originX = xAscending ? gridOrigin.x + x + shipSizeX / 2 : gridOrigin.x - x - shipSizeX / 2;
         float originZ = zDescending ? gridOrigin.z - z - shipSizeZ / 2 : gridOrigin.z + z + shipSizeZ / 2;
