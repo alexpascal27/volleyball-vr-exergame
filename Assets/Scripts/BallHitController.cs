@@ -7,6 +7,7 @@ using Valve.VR;
 public class BallHitController : MonoBehaviour
 {
     [SerializeField] public GameObject linePrefab;
+    [SerializeField] public bool spawnLine = false;
     // we want to apply a force upon a collision with ball
     [SerializeField] private float forceScale = 100f;
     
@@ -62,9 +63,12 @@ public class BallHitController : MonoBehaviour
             ContactPoint contact = collision.contacts[0];
             reflectionDirection = controllerRigidbody.velocity.normalized;
 
-            // spawn line
-            linePrefab.transform.LookAt(reflectionDirection);
-            Instantiate(linePrefab, contact.point, linePrefab.transform.rotation);
+            if (spawnLine)
+            {
+                // spawn line
+                linePrefab.transform.LookAt(reflectionDirection);
+                Instantiate(linePrefab, contact.point, linePrefab.transform.rotation);
+            }
             
             ApplyHit(ballPrefab);
         }
