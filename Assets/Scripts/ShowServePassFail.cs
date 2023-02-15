@@ -11,7 +11,17 @@ public class ShowServePassFail : MonoBehaviour
 
     // only need to check once
     private int collisionCount = 0;
-    
+
+    private void Start()
+    {
+        
+    }
+
+    private void Update()
+    {
+        
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collisionCount <= 0)
@@ -35,6 +45,5 @@ public class ShowServePassFail : MonoBehaviour
 
             collisionCount++;
         }
-        
     }
 }

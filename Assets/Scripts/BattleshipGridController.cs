@@ -219,7 +219,7 @@ public class BattleshipGridController : MonoBehaviour
        if (isWholeShipSunk)
        {
            ChangeShipMaterial(shipIndex);
-           ChangeTileMaterial(y, x);
+           //ChangeTileMaterial(y, x);
        }
        
    }

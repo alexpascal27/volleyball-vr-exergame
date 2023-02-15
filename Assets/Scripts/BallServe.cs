@@ -72,21 +72,21 @@ public class BallServe : MonoBehaviour
             {
                 float x = UnityEngine.Random.Range(courtOrigin.Item1 - courtDimensions.Item1/2f - outOfCourtRange, courtOrigin.Item1 - courtDimensions.Item1/2f);
                 float z = UnityEngine.Random.Range(courtOrigin.Item2, courtOrigin.Item2 + courtDimensions.Item2);
-                Debug.Log(x +", "+ y + ", "+ z);
+                //Debug.Log("LEFT OUT: " + x +", "+ y + ", "+ z);
                 return new Vector3(x, y, z);
             }
             else if (option == 1)
             {
                 float x = UnityEngine.Random.Range(courtOrigin.Item1 + courtDimensions.Item1/2f, courtOrigin.Item1 + courtDimensions.Item1/2f + outOfCourtRange);
                 float z = UnityEngine.Random.Range(courtOrigin.Item2, courtOrigin.Item2 + courtDimensions.Item2);
-                Debug.Log(x +", "+ y + ", "+ z);
+                //Debug.Log("RIGHT OUT: " + x +", "+ y + ", "+ z);
                 return new Vector3(x, y, z);
             }
             else
             {
                 float x = UnityEngine.Random.Range(courtOrigin.Item1 - courtDimensions.Item1/2f - outOfCourtRange, courtOrigin.Item1 + courtDimensions.Item1/2f + outOfCourtRange);
                 float z = UnityEngine.Random.Range(courtOrigin.Item2 + courtDimensions.Item2, courtOrigin.Item2 + courtDimensions.Item2 + outOfCourtRange);
-                Debug.Log(x +", "+ y + ", "+ z);
+                //Debug.Log("BEHIND OUT: " + x +", "+ y + ", "+ z);
                 return new Vector3(x, y, z);
             }
 
@@ -96,7 +96,7 @@ public class BallServe : MonoBehaviour
             // for origin point (X, Z) and dimensions (M, N) we have the available range of ({X - M/2, X + M/2}, {Z, Z + N}) 
             float x = UnityEngine.Random.Range(courtOrigin.Item1 - courtDimensions.Item1/2f, courtOrigin.Item1 + courtDimensions.Item1/2f);
             float z = UnityEngine.Random.Range(courtOrigin.Item2, courtOrigin.Item2 + courtDimensions.Item2);
-            Debug.Log(x +", "+ y + ", "+ z);
+            //Debug.Log("IN: " + x +", "+ y + ", "+ z);
             return new Vector3(x, y, z);
         }
     }
