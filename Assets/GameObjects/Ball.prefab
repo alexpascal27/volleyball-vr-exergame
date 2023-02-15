@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5267061180023506879}
   - component: {fileID: 7501526502952309570}
   - component: {fileID: 5790508381949775465}
+  - component: {fileID: 2389713665015586772}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -29,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5267061180023506816}
-  m_LocalRotation: {x: -0.08783679, y: -0.17401886, z: -0.015586177, w: 0.9806932}
+  m_LocalRotation: {x: -0.10600251, y: -0.18499793, z: -0.020076027, w: 0.97679895}
   m_LocalPosition: {x: 4, y: 1.9537, z: -9}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
@@ -145,3 +146,16 @@ MonoBehaviour:
     type: 3}
   successMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f, type: 2}
   failMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+--- !u!114 &2389713665015586772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5267061180023506816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a90e68e9efa7d4188aeb0a25817d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasAlreadyHitADifferentTile: 0

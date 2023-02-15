@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 30153258}
   - component: {fileID: 30153260}
   - component: {fileID: 30153259}
+  - component: {fileID: 30153261}
   m_Layer: 0
   m_Name: 8
   m_TagString: Untagged
@@ -222,6 +223,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30153256}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &30153261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30153256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &35934170
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +251,7 @@ GameObject:
   - component: {fileID: 35934172}
   - component: {fileID: 35934174}
   - component: {fileID: 35934173}
+  - component: {fileID: 35934175}
   m_Layer: 0
   m_Name: 7
   m_TagString: Untagged
@@ -319,6 +337,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35934170}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &35934175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35934170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &91507696
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,6 +408,7 @@ GameObject:
   - component: {fileID: 97809779}
   - component: {fileID: 97809781}
   - component: {fileID: 97809780}
+  - component: {fileID: 97809782}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -459,6 +494,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97809777}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &97809782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97809777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &111476976
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,6 +562,7 @@ GameObject:
   - component: {fileID: 119640305}
   - component: {fileID: 119640307}
   - component: {fileID: 119640306}
+  - component: {fileID: 119640308}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -596,6 +648,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119640303}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &119640308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119640303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &121297302
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +676,7 @@ GameObject:
   - component: {fileID: 121297304}
   - component: {fileID: 121297306}
   - component: {fileID: 121297305}
+  - component: {fileID: 121297307}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -693,6 +762,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &121297307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121297302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &125581731
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +830,7 @@ GameObject:
   - component: {fileID: 137323251}
   - component: {fileID: 137323253}
   - component: {fileID: 137323252}
+  - component: {fileID: 137323254}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -830,6 +916,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137323249}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &137323254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137323249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &145563295
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +944,7 @@ GameObject:
   - component: {fileID: 145563297}
   - component: {fileID: 145563299}
   - component: {fileID: 145563298}
+  - component: {fileID: 145563300}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -927,6 +1030,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145563295}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &145563300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145563295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &145618826
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,6 +1058,7 @@ GameObject:
   - component: {fileID: 145618828}
   - component: {fileID: 145618830}
   - component: {fileID: 145618829}
+  - component: {fileID: 145618831}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -1024,6 +1144,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145618826}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &145618831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145618826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &173259651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,6 +1172,7 @@ GameObject:
   - component: {fileID: 173259653}
   - component: {fileID: 173259655}
   - component: {fileID: 173259654}
+  - component: {fileID: 173259656}
   m_Layer: 0
   m_Name: 6
   m_TagString: Untagged
@@ -1121,6 +1258,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &173259656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173259651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &192847638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,6 +1286,7 @@ GameObject:
   - component: {fileID: 192847640}
   - component: {fileID: 192847642}
   - component: {fileID: 192847641}
+  - component: {fileID: 192847643}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -1218,6 +1372,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192847638}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &192847643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192847638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &204530281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,6 +1400,7 @@ GameObject:
   - component: {fileID: 204530283}
   - component: {fileID: 204530285}
   - component: {fileID: 204530284}
+  - component: {fileID: 204530286}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -1315,6 +1486,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204530281}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &204530286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204530281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &297055754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,6 +1514,7 @@ GameObject:
   - component: {fileID: 297055756}
   - component: {fileID: 297055758}
   - component: {fileID: 297055757}
+  - component: {fileID: 297055759}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -1412,6 +1600,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297055754}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &297055759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297055754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &380489134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,6 +1628,7 @@ GameObject:
   - component: {fileID: 380489136}
   - component: {fileID: 380489138}
   - component: {fileID: 380489137}
+  - component: {fileID: 380489139}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -1509,6 +1714,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380489134}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &380489139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380489134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &380575002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,6 +1839,7 @@ GameObject:
   - component: {fileID: 389899197}
   - component: {fileID: 389899199}
   - component: {fileID: 389899198}
+  - component: {fileID: 389899200}
   m_Layer: 0
   m_Name: 8
   m_TagString: Untagged
@@ -1703,6 +1925,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389899195}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &389899200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389899195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &395503610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,6 +1953,7 @@ GameObject:
   - component: {fileID: 395503612}
   - component: {fileID: 395503614}
   - component: {fileID: 395503613}
+  - component: {fileID: 395503615}
   m_Layer: 0
   m_Name: 7
   m_TagString: Untagged
@@ -1800,6 +2039,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395503610}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &395503615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395503610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1001 &413038416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1900,6 +2155,7 @@ GameObject:
   - component: {fileID: 416625116}
   - component: {fileID: 416625118}
   - component: {fileID: 416625117}
+  - component: {fileID: 416625119}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -1985,6 +2241,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416625114}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &416625119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416625114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &447165229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,6 +2269,7 @@ GameObject:
   - component: {fileID: 447165231}
   - component: {fileID: 447165233}
   - component: {fileID: 447165232}
+  - component: {fileID: 447165234}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -2082,6 +2355,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447165229}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &447165234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447165229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &474501359
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,6 +2480,7 @@ GameObject:
   - component: {fileID: 506858080}
   - component: {fileID: 506858082}
   - component: {fileID: 506858081}
+  - component: {fileID: 506858083}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -2276,6 +2566,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &506858083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506858078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &516774857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,6 +2937,7 @@ GameObject:
   - component: {fileID: 530768708}
   - component: {fileID: 530768710}
   - component: {fileID: 530768709}
+  - component: {fileID: 530768711}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -2716,6 +3023,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530768706}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &530768711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530768706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &543034887
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,6 +3051,7 @@ GameObject:
   - component: {fileID: 543034889}
   - component: {fileID: 543034891}
   - component: {fileID: 543034890}
+  - component: {fileID: 543034892}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -2813,6 +3137,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543034887}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &543034892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543034887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &550890821
 GameObject:
   m_ObjectHideFlags: 0
@@ -2825,6 +3165,7 @@ GameObject:
   - component: {fileID: 550890823}
   - component: {fileID: 550890825}
   - component: {fileID: 550890824}
+  - component: {fileID: 550890826}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -2910,6 +3251,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550890821}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &550890826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550890821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &571587886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2922,6 +3279,7 @@ GameObject:
   - component: {fileID: 571587888}
   - component: {fileID: 571587890}
   - component: {fileID: 571587889}
+  - component: {fileID: 571587891}
   m_Layer: 0
   m_Name: 8
   m_TagString: Untagged
@@ -3007,6 +3365,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571587886}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &571587891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571587886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &589431154
 GameObject:
   m_ObjectHideFlags: 0
@@ -3019,6 +3393,7 @@ GameObject:
   - component: {fileID: 589431156}
   - component: {fileID: 589431158}
   - component: {fileID: 589431157}
+  - component: {fileID: 589431159}
   m_Layer: 0
   m_Name: 6
   m_TagString: Untagged
@@ -3104,6 +3479,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589431154}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &589431159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589431154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &591951040
 GameObject:
   m_ObjectHideFlags: 0
@@ -3116,6 +3507,7 @@ GameObject:
   - component: {fileID: 591951042}
   - component: {fileID: 591951044}
   - component: {fileID: 591951043}
+  - component: {fileID: 591951045}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -3201,6 +3593,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591951040}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &591951045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591951040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &599916901
 GameObject:
   m_ObjectHideFlags: 0
@@ -3336,6 +3744,7 @@ GameObject:
   - component: {fileID: 602391544}
   - component: {fileID: 602391546}
   - component: {fileID: 602391545}
+  - component: {fileID: 602391547}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -3421,6 +3830,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602391542}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &602391547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602391542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &605627501
 GameObject:
   m_ObjectHideFlags: 0
@@ -3433,6 +3858,7 @@ GameObject:
   - component: {fileID: 605627503}
   - component: {fileID: 605627505}
   - component: {fileID: 605627504}
+  - component: {fileID: 605627506}
   m_Layer: 0
   m_Name: 7
   m_TagString: Untagged
@@ -3518,6 +3944,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &605627506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605627501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &626610294
 GameObject:
   m_ObjectHideFlags: 0
@@ -3530,6 +3972,7 @@ GameObject:
   - component: {fileID: 626610296}
   - component: {fileID: 626610298}
   - component: {fileID: 626610297}
+  - component: {fileID: 626610299}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -3615,6 +4058,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626610294}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &626610299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626610294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &632601851
 GameObject:
   m_ObjectHideFlags: 0
@@ -3627,6 +4086,7 @@ GameObject:
   - component: {fileID: 632601853}
   - component: {fileID: 632601855}
   - component: {fileID: 632601854}
+  - component: {fileID: 632601856}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -3712,6 +4172,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632601851}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &632601856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632601851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &636890199
 GameObject:
   m_ObjectHideFlags: 0
@@ -3724,6 +4200,7 @@ GameObject:
   - component: {fileID: 636890201}
   - component: {fileID: 636890203}
   - component: {fileID: 636890202}
+  - component: {fileID: 636890204}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -3809,6 +4286,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636890199}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &636890204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636890199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &655346360
 GameObject:
   m_ObjectHideFlags: 0
@@ -3821,6 +4314,7 @@ GameObject:
   - component: {fileID: 655346362}
   - component: {fileID: 655346364}
   - component: {fileID: 655346363}
+  - component: {fileID: 655346365}
   m_Layer: 0
   m_Name: 6
   m_TagString: Untagged
@@ -3906,6 +4400,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655346360}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &655346365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655346360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &671580132
 GameObject:
   m_ObjectHideFlags: 0
@@ -3918,6 +4428,7 @@ GameObject:
   - component: {fileID: 671580134}
   - component: {fileID: 671580136}
   - component: {fileID: 671580135}
+  - component: {fileID: 671580137}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -4003,6 +4514,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671580132}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &671580137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671580132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &674580952
 GameObject:
   m_ObjectHideFlags: 0
@@ -4015,6 +4542,7 @@ GameObject:
   - component: {fileID: 674580954}
   - component: {fileID: 674580956}
   - component: {fileID: 674580955}
+  - component: {fileID: 674580957}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -4100,6 +4628,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674580952}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &674580957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674580952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &683028631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4112,6 +4656,7 @@ GameObject:
   - component: {fileID: 683028633}
   - component: {fileID: 683028635}
   - component: {fileID: 683028634}
+  - component: {fileID: 683028636}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -4197,6 +4742,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 683028631}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &683028636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683028631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4303,6 +4864,7 @@ GameObject:
   - component: {fileID: 744062711}
   - component: {fileID: 744062713}
   - component: {fileID: 744062712}
+  - component: {fileID: 744062714}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -4388,6 +4950,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744062709}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &744062714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744062709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &744527544
 GameObject:
   m_ObjectHideFlags: 0
@@ -4497,6 +5075,7 @@ GameObject:
   - component: {fileID: 764511923}
   - component: {fileID: 764511925}
   - component: {fileID: 764511924}
+  - component: {fileID: 764511926}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -4582,6 +5161,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764511921}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &764511926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764511921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &792492186
 GameObject:
   m_ObjectHideFlags: 0
@@ -4594,6 +5189,7 @@ GameObject:
   - component: {fileID: 792492188}
   - component: {fileID: 792492190}
   - component: {fileID: 792492189}
+  - component: {fileID: 792492191}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -4679,6 +5275,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792492186}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &792492191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792492186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &794789334
 GameObject:
   m_ObjectHideFlags: 0
@@ -4772,6 +5384,7 @@ GameObject:
   - component: {fileID: 816560321}
   - component: {fileID: 816560323}
   - component: {fileID: 816560322}
+  - component: {fileID: 816560324}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -4857,6 +5470,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816560319}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &816560324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816560319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &826073339
 GameObject:
   m_ObjectHideFlags: 0
@@ -4869,6 +5498,7 @@ GameObject:
   - component: {fileID: 826073341}
   - component: {fileID: 826073343}
   - component: {fileID: 826073342}
+  - component: {fileID: 826073344}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -4954,6 +5584,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826073339}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &826073344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826073339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!114 &866256929 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114000011957598740, guid: dc06161b6d97feb419f45f03b62e14b9,
@@ -5191,6 +5837,7 @@ GameObject:
   - component: {fileID: 922168598}
   - component: {fileID: 922168600}
   - component: {fileID: 922168599}
+  - component: {fileID: 922168601}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -5276,6 +5923,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922168596}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &922168601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922168596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &934005187
 GameObject:
   m_ObjectHideFlags: 0
@@ -5316,7 +5979,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934005187}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ad75fc79847c964ab271860aecd8181, type: 3}
   m_Name: 
@@ -5358,6 +6021,7 @@ GameObject:
   - component: {fileID: 942667655}
   - component: {fileID: 942667657}
   - component: {fileID: 942667656}
+  - component: {fileID: 942667658}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -5443,6 +6107,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942667653}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &942667658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942667653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &958909607
 GameObject:
   m_ObjectHideFlags: 0
@@ -5455,6 +6135,7 @@ GameObject:
   - component: {fileID: 958909609}
   - component: {fileID: 958909611}
   - component: {fileID: 958909610}
+  - component: {fileID: 958909612}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -5540,6 +6221,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958909607}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &958909612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958909607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &974417695
 GameObject:
   m_ObjectHideFlags: 0
@@ -5552,6 +6249,7 @@ GameObject:
   - component: {fileID: 974417697}
   - component: {fileID: 974417699}
   - component: {fileID: 974417698}
+  - component: {fileID: 974417700}
   m_Layer: 0
   m_Name: 6
   m_TagString: Untagged
@@ -5637,6 +6335,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974417695}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &974417700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974417695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1098583515
 GameObject:
   m_ObjectHideFlags: 0
@@ -5649,6 +6363,7 @@ GameObject:
   - component: {fileID: 1098583517}
   - component: {fileID: 1098583519}
   - component: {fileID: 1098583518}
+  - component: {fileID: 1098583520}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -5734,6 +6449,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1098583520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098583515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1104175775
 GameObject:
   m_ObjectHideFlags: 0
@@ -5786,6 +6517,7 @@ GameObject:
   - component: {fileID: 1104580411}
   - component: {fileID: 1104580413}
   - component: {fileID: 1104580412}
+  - component: {fileID: 1104580414}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -5871,6 +6603,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1104580414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104580409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1118825998
 GameObject:
   m_ObjectHideFlags: 0
@@ -5883,6 +6631,7 @@ GameObject:
   - component: {fileID: 1118826000}
   - component: {fileID: 1118826002}
   - component: {fileID: 1118826001}
+  - component: {fileID: 1118826003}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -5968,6 +6717,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118825998}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1118826003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118825998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1157304989
 GameObject:
   m_ObjectHideFlags: 0
@@ -6202,6 +6967,7 @@ GameObject:
   - component: {fileID: 1160011263}
   - component: {fileID: 1160011265}
   - component: {fileID: 1160011264}
+  - component: {fileID: 1160011266}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -6287,6 +7053,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160011261}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1160011266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160011261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1161677761
 GameObject:
   m_ObjectHideFlags: 0
@@ -6299,6 +7081,7 @@ GameObject:
   - component: {fileID: 1161677763}
   - component: {fileID: 1161677765}
   - component: {fileID: 1161677764}
+  - component: {fileID: 1161677766}
   m_Layer: 0
   m_Name: 7
   m_TagString: Untagged
@@ -6384,6 +7167,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161677761}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1161677766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161677761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1162845063
 GameObject:
   m_ObjectHideFlags: 0
@@ -6396,6 +7195,7 @@ GameObject:
   - component: {fileID: 1162845065}
   - component: {fileID: 1162845067}
   - component: {fileID: 1162845066}
+  - component: {fileID: 1162845068}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -6481,6 +7281,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162845063}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1162845068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162845063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1191038455
 GameObject:
   m_ObjectHideFlags: 0
@@ -6493,6 +7309,7 @@ GameObject:
   - component: {fileID: 1191038457}
   - component: {fileID: 1191038459}
   - component: {fileID: 1191038458}
+  - component: {fileID: 1191038460}
   m_Layer: 0
   m_Name: 8
   m_TagString: Untagged
@@ -6578,6 +7395,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191038455}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1191038460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191038455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1206709561
 GameObject:
   m_ObjectHideFlags: 0
@@ -6590,6 +7423,7 @@ GameObject:
   - component: {fileID: 1206709563}
   - component: {fileID: 1206709565}
   - component: {fileID: 1206709564}
+  - component: {fileID: 1206709566}
   m_Layer: 0
   m_Name: 8
   m_TagString: Untagged
@@ -6675,6 +7509,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206709561}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1206709566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206709561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1266180730
 GameObject:
   m_ObjectHideFlags: 0
@@ -6687,6 +7537,7 @@ GameObject:
   - component: {fileID: 1266180732}
   - component: {fileID: 1266180734}
   - component: {fileID: 1266180733}
+  - component: {fileID: 1266180735}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -6772,6 +7623,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266180730}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1266180735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266180730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1287691767
 GameObject:
   m_ObjectHideFlags: 0
@@ -6824,6 +7691,7 @@ GameObject:
   - component: {fileID: 1323490398}
   - component: {fileID: 1323490400}
   - component: {fileID: 1323490399}
+  - component: {fileID: 1323490401}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -6909,6 +7777,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323490396}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1323490401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323490396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!114 &1377793817 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114000011273627542, guid: dc06161b6d97feb419f45f03b62e14b9,
@@ -7514,6 +8398,7 @@ GameObject:
   - component: {fileID: 1428899099}
   - component: {fileID: 1428899101}
   - component: {fileID: 1428899100}
+  - component: {fileID: 1428899102}
   m_Layer: 0
   m_Name: 7
   m_TagString: Untagged
@@ -7599,6 +8484,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428899097}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1428899102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428899097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1437619294
 GameObject:
   m_ObjectHideFlags: 0
@@ -7708,6 +8609,7 @@ GameObject:
   - component: {fileID: 1478852911}
   - component: {fileID: 1478852913}
   - component: {fileID: 1478852912}
+  - component: {fileID: 1478852914}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -7793,6 +8695,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478852909}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1478852914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478852909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1496801792
 GameObject:
   m_ObjectHideFlags: 0
@@ -8027,6 +8945,7 @@ GameObject:
   - component: {fileID: 1498654708}
   - component: {fileID: 1498654710}
   - component: {fileID: 1498654709}
+  - component: {fileID: 1498654711}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -8112,6 +9031,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498654706}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1498654711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498654706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1499572284
 GameObject:
   m_ObjectHideFlags: 0
@@ -8221,6 +9156,7 @@ GameObject:
   - component: {fileID: 1513839817}
   - component: {fileID: 1513839819}
   - component: {fileID: 1513839818}
+  - component: {fileID: 1513839820}
   m_Layer: 0
   m_Name: 6
   m_TagString: Untagged
@@ -8306,6 +9242,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513839815}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1513839820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513839815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1555107985
 GameObject:
   m_ObjectHideFlags: 0
@@ -8318,6 +9270,7 @@ GameObject:
   - component: {fileID: 1555107987}
   - component: {fileID: 1555107989}
   - component: {fileID: 1555107988}
+  - component: {fileID: 1555107990}
   m_Layer: 0
   m_Name: 6
   m_TagString: Untagged
@@ -8403,6 +9356,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555107985}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1555107990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555107985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1595062028
 GameObject:
   m_ObjectHideFlags: 0
@@ -8415,6 +9384,7 @@ GameObject:
   - component: {fileID: 1595062030}
   - component: {fileID: 1595062032}
   - component: {fileID: 1595062031}
+  - component: {fileID: 1595062033}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -8500,6 +9470,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595062028}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1595062033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595062028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1600632626
 GameObject:
   m_ObjectHideFlags: 0
@@ -8512,6 +9498,7 @@ GameObject:
   - component: {fileID: 1600632628}
   - component: {fileID: 1600632630}
   - component: {fileID: 1600632629}
+  - component: {fileID: 1600632631}
   m_Layer: 0
   m_Name: 6
   m_TagString: Untagged
@@ -8597,6 +9584,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600632626}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1600632631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600632626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1602416534
 GameObject:
   m_ObjectHideFlags: 0
@@ -8706,6 +9709,7 @@ GameObject:
   - component: {fileID: 1605132171}
   - component: {fileID: 1605132173}
   - component: {fileID: 1605132172}
+  - component: {fileID: 1605132174}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -8791,6 +9795,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605132169}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1605132174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605132169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1643329311
 GameObject:
   m_ObjectHideFlags: 0
@@ -8803,6 +9823,7 @@ GameObject:
   - component: {fileID: 1643329313}
   - component: {fileID: 1643329315}
   - component: {fileID: 1643329314}
+  - component: {fileID: 1643329316}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -8888,6 +9909,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1643329316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643329311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1653275456
 GameObject:
   m_ObjectHideFlags: 0
@@ -8900,6 +9937,7 @@ GameObject:
   - component: {fileID: 1653275458}
   - component: {fileID: 1653275460}
   - component: {fileID: 1653275459}
+  - component: {fileID: 1653275461}
   m_Layer: 0
   m_Name: 7
   m_TagString: Untagged
@@ -8985,6 +10023,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653275456}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1653275461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653275456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1665309847
 GameObject:
   m_ObjectHideFlags: 0
@@ -8997,6 +10051,7 @@ GameObject:
   - component: {fileID: 1665309849}
   - component: {fileID: 1665309851}
   - component: {fileID: 1665309850}
+  - component: {fileID: 1665309852}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -9082,6 +10137,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665309847}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1665309852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665309847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1669187541
 GameObject:
   m_ObjectHideFlags: 0
@@ -9094,6 +10165,7 @@ GameObject:
   - component: {fileID: 1669187543}
   - component: {fileID: 1669187545}
   - component: {fileID: 1669187544}
+  - component: {fileID: 1669187546}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -9179,6 +10251,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669187541}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1669187546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669187541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1681339898
 GameObject:
   m_ObjectHideFlags: 0
@@ -9288,6 +10376,7 @@ GameObject:
   - component: {fileID: 1689808363}
   - component: {fileID: 1689808365}
   - component: {fileID: 1689808364}
+  - component: {fileID: 1689808366}
   m_Layer: 0
   m_Name: 6
   m_TagString: Untagged
@@ -9373,6 +10462,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689808361}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1689808366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689808361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1693062859
 GameObject:
   m_ObjectHideFlags: 0
@@ -9704,6 +10809,7 @@ GameObject:
   - component: {fileID: 1728730712}
   - component: {fileID: 1728730714}
   - component: {fileID: 1728730713}
+  - component: {fileID: 1728730715}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -9789,6 +10895,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728730710}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1728730715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728730710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1736617899
 GameObject:
   m_ObjectHideFlags: 0
@@ -9924,6 +11046,7 @@ GameObject:
   - component: {fileID: 1738179236}
   - component: {fileID: 1738179238}
   - component: {fileID: 1738179237}
+  - component: {fileID: 1738179239}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -10009,6 +11132,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738179234}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1738179239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738179234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1740456039
 GameObject:
   m_ObjectHideFlags: 0
@@ -10021,6 +11160,7 @@ GameObject:
   - component: {fileID: 1740456041}
   - component: {fileID: 1740456043}
   - component: {fileID: 1740456042}
+  - component: {fileID: 1740456044}
   m_Layer: 0
   m_Name: 8
   m_TagString: Untagged
@@ -10106,6 +11246,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740456039}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1740456044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740456039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1758010924
 GameObject:
   m_ObjectHideFlags: 0
@@ -10118,6 +11274,7 @@ GameObject:
   - component: {fileID: 1758010926}
   - component: {fileID: 1758010928}
   - component: {fileID: 1758010927}
+  - component: {fileID: 1758010929}
   m_Layer: 0
   m_Name: 8
   m_TagString: Untagged
@@ -10203,6 +11360,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758010924}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1758010929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758010924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1766450269
 GameObject:
   m_ObjectHideFlags: 0
@@ -10312,6 +11485,7 @@ GameObject:
   - component: {fileID: 1840946579}
   - component: {fileID: 1840946581}
   - component: {fileID: 1840946580}
+  - component: {fileID: 1840946582}
   m_Layer: 0
   m_Name: 8
   m_TagString: Untagged
@@ -10397,6 +11571,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840946577}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1840946582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840946577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1853107716 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 133480, guid: dc06161b6d97feb419f45f03b62e14b9,
@@ -10456,6 +11646,7 @@ GameObject:
   - component: {fileID: 1863128633}
   - component: {fileID: 1863128635}
   - component: {fileID: 1863128634}
+  - component: {fileID: 1863128636}
   m_Layer: 0
   m_Name: 7
   m_TagString: Untagged
@@ -10541,6 +11732,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863128631}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1863128636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863128631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1864858817
 GameObject:
   m_ObjectHideFlags: 0
@@ -10553,6 +11760,7 @@ GameObject:
   - component: {fileID: 1864858819}
   - component: {fileID: 1864858821}
   - component: {fileID: 1864858820}
+  - component: {fileID: 1864858822}
   m_Layer: 0
   m_Name: 6
   m_TagString: Untagged
@@ -10638,6 +11846,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864858817}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1864858822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864858817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1878279840
 GameObject:
   m_ObjectHideFlags: 0
@@ -10650,6 +11874,7 @@ GameObject:
   - component: {fileID: 1878279842}
   - component: {fileID: 1878279844}
   - component: {fileID: 1878279843}
+  - component: {fileID: 1878279845}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -10735,6 +11960,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878279840}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1878279845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878279840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1880922061
 GameObject:
   m_ObjectHideFlags: 0
@@ -10794,6 +12035,8 @@ MonoBehaviour:
   shipPrefab: {fileID: 4617432717212962174, guid: e25d66160db06c84fa5ad8656f2cd35e,
     type: 3}
   yShipSpawnOffset: 0.5
+  scaleOffset: 0.3
+  shipSinkMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1895044486
 GameObject:
   m_ObjectHideFlags: 0
@@ -10806,6 +12049,7 @@ GameObject:
   - component: {fileID: 1895044488}
   - component: {fileID: 1895044490}
   - component: {fileID: 1895044489}
+  - component: {fileID: 1895044491}
   m_Layer: 0
   m_Name: 7
   m_TagString: Untagged
@@ -10891,6 +12135,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895044486}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1895044491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895044486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1912526542
 GameObject:
   m_ObjectHideFlags: 0
@@ -11137,6 +12397,7 @@ GameObject:
   - component: {fileID: 1927291153}
   - component: {fileID: 1927291155}
   - component: {fileID: 1927291154}
+  - component: {fileID: 1927291156}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -11222,6 +12483,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1927291156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927291151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1947281977
 GameObject:
   m_ObjectHideFlags: 0
@@ -11274,6 +12551,7 @@ GameObject:
   - component: {fileID: 1953594785}
   - component: {fileID: 1953594787}
   - component: {fileID: 1953594786}
+  - component: {fileID: 1953594788}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -11359,6 +12637,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953594783}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1953594788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953594783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &1960135717
 GameObject:
   m_ObjectHideFlags: 0
@@ -11494,6 +12788,7 @@ GameObject:
   - component: {fileID: 1975435027}
   - component: {fileID: 1975435029}
   - component: {fileID: 1975435028}
+  - component: {fileID: 1975435030}
   m_Layer: 0
   m_Name: 8
   m_TagString: Untagged
@@ -11579,6 +12874,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975435025}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1975435030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975435025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &2063760365
 GameObject:
   m_ObjectHideFlags: 0
@@ -11591,6 +12902,7 @@ GameObject:
   - component: {fileID: 2063760367}
   - component: {fileID: 2063760369}
   - component: {fileID: 2063760368}
+  - component: {fileID: 2063760370}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -11676,6 +12988,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063760365}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2063760370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063760365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &2066108030
 GameObject:
   m_ObjectHideFlags: 0
@@ -11875,6 +13203,7 @@ GameObject:
   - component: {fileID: 2082467482}
   - component: {fileID: 2082467484}
   - component: {fileID: 2082467483}
+  - component: {fileID: 2082467485}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -11960,6 +13289,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082467480}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2082467485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082467480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &2123937139
 GameObject:
   m_ObjectHideFlags: 0
@@ -12069,6 +13414,7 @@ GameObject:
   - component: {fileID: 2133621252}
   - component: {fileID: 2133621254}
   - component: {fileID: 2133621253}
+  - component: {fileID: 2133621255}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -12154,6 +13500,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133621250}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2133621255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133621250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}
 --- !u!1 &2136470073
 GameObject:
   m_ObjectHideFlags: 0
@@ -12166,6 +13528,7 @@ GameObject:
   - component: {fileID: 2136470075}
   - component: {fileID: 2136470077}
   - component: {fileID: 2136470076}
+  - component: {fileID: 2136470078}
   m_Layer: 0
   m_Name: 7
   m_TagString: Untagged
@@ -12251,3 +13614,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136470073}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2136470078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136470073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d9974c069b3c46bdff3113042e661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successfulHitMaterial: {fileID: 2100000, guid: 97b8995082408bf4cbcd1a5997703c3f,
+    type: 2}
+  failedHitMaterial: {fileID: 2100000, guid: 2ba5cd4c73f4bc14981f9748c4d651e8, type: 2}
+  shipSunkHitMaterial: {fileID: 2100000, guid: 71796ce414e9c444e9bf8762704eb1f6, type: 2}

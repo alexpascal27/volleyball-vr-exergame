@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,11 +12,18 @@ public class BattleshipGridController : MonoBehaviour
     [SerializeField] private bool xAscending = true;
     [SerializeField] private GameObject shipPrefab;
     [SerializeField] private float yShipSpawnOffset = 0.5f;
+    [SerializeField] private float scaleOffset = 0.3f;
+    [SerializeField] private Material shipSinkMaterial;
     
     
     // if [][] = "" unallocated, if [][] = "{ship_name}" then allocated
-    private String[,] grid = new String[9, 9];
+    private const int ShipDimensionsX = 9;
+    private const int ShipDimensionsY = 9;
+    private String[,] grid = new String[ShipDimensionsY, ShipDimensionsX];
+    private bool[,] hasBeenHitGrid = new bool[ShipDimensionsY, ShipDimensionsX];
     private String[] shipNames = new String[]{"Destroyer", "Submarine", "Cruiser", "Battleship", "Carrier"};
+    private int[] shipTileCount = new int[] { 2, 3, 3, 8, 5 };
+    private GameObject[] shipPrefabs = new GameObject[5];
     private Tuple<int, int>[] shipSizes = new Tuple<int, int>[5]
     {
         new Tuple<int, int>(1, 2),
@@ -27,17 +32,13 @@ public class BattleshipGridController : MonoBehaviour
         new Tuple<int, int>(2, 4),
         new Tuple<int, int>(1, 5)
     };
-    
-    // Start is called before the first frame update
+
+    private Dictionary<char, int> rowNameToIndex = new Dictionary<char, int>();
+
     void Start()
     {
         InitGrid();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        InitRowNameToIndexDictionary();
     }
 
     void InitGrid()
@@ -60,6 +61,19 @@ public class BattleshipGridController : MonoBehaviour
             }
         }
         PrintGrid();
+    }
+
+    void InitRowNameToIndexDictionary()
+    {
+        rowNameToIndex.Add('A', 0);
+        rowNameToIndex.Add('B', 1);
+        rowNameToIndex.Add('C', 2);
+        rowNameToIndex.Add('D', 3);
+        rowNameToIndex.Add('E', 4);
+        rowNameToIndex.Add('F', 5);
+        rowNameToIndex.Add('G', 6);
+        rowNameToIndex.Add('H', 7);
+        rowNameToIndex.Add('I', 8);
     }
     
     void PrintGrid()
@@ -135,7 +149,6 @@ public class BattleshipGridController : MonoBehaviour
 
         return new Tuple<int, int>(shipSizeY, shipSizeX);
     }
-
     
    void InstantiateShipPrefab(int z, int x, bool isHorizontal, int shipIndex)
     {
@@ -151,6 +164,88 @@ public class BattleshipGridController : MonoBehaviour
         // Rotate if vertical
         // TODO: when you add an actual model, not important now as just cube
         // Set scale based on shipSize
-        instantiatedShipPrefab.transform.localScale = new Vector3(shipSizeX, instantiatedShipPrefab.transform.localScale.y, shipSizeZ);
+        instantiatedShipPrefab.transform.localScale = new Vector3(shipSizeX - scaleOffset, instantiatedShipPrefab.transform.localScale.y, shipSizeZ - scaleOffset);
+        shipPrefabs[shipIndex] = instantiatedShipPrefab;
     }
+   
+   
+   // Bool represents ifSuccessfulHit (true if hit, false if not hit)
+   public bool RegisterHit(String tileName)
+   {
+       // y, x
+       Tuple<int, int> tileCoordinates = ConvertTileNameToCoordinates(tileName);
+       // check status of tile
+       bool isHit = CheckIfHit(tileCoordinates);
+
+       bool alreadyHit = hasBeenHitGrid[tileCoordinates.Item1, tileCoordinates.Item2];
+       // if new hit
+       if (!alreadyHit && isHit) RegisterHitToShip(tileCoordinates);
+       else
+       {
+           Debug.Log("Repeat hit at " + tileName);
+       }
+
+       return isHit;
+   }
+
+   Tuple<int, int> ConvertTileNameToCoordinates(String tileName)
+   {
+       char rowName = tileName[0];
+       int rowNumber = rowNameToIndex[rowName];
+       int tileNumber = int.Parse(tileName[1].ToString());
+       return new Tuple<int, int>(rowNumber, tileNumber);
+   }
+
+   bool CheckIfHit(Tuple<int, int> coordinates)
+   {
+       int y = coordinates.Item1;
+       int x = coordinates.Item2;
+       // if empty not a hit
+       return !string.IsNullOrEmpty(grid[y, x]);
+   }
+
+   void RegisterHitToShip(Tuple<int, int> coordinates)
+   {
+       int y = coordinates.Item1;
+       int x = coordinates.Item2;
+
+       int shipIndex = GetShipIndex(grid[y, x]);
+       if(shipIndex==-1) Debug.LogError("Failure to get ship index");
+       shipTileCount[shipIndex] = shipTileCount[shipIndex] - 1;
+       hasBeenHitGrid[y, x] = true;
+       
+       bool isWholeShipSunk = shipTileCount[shipIndex] == 0;
+
+       if (isWholeShipSunk)
+       {
+           ChangeShipMaterial(shipIndex);
+           ChangeTileMaterial(y, x);
+       }
+       
+   }
+
+   int GetShipIndex(String shipName)
+   {
+       for (int i = 0; i < shipNames.GetLength(0); i++)
+       {
+           if (shipName == shipNames[i]) return i;
+       }
+
+       return -1;
+   }
+
+   void ChangeShipMaterial(int shipIndex)
+   {
+       GameObject currentShipPrefab = shipPrefabs[shipIndex];
+       MeshRenderer renderer = currentShipPrefab.GetComponent<MeshRenderer>();
+       renderer.material = shipSinkMaterial;
+   }
+
+   void ChangeTileMaterial(int y, int x)
+   {
+       GameObject tilePrefab = gameObject.transform.GetChild(y).GetChild(x).gameObject;
+       BattleshipTileController battleshipTileController = tilePrefab.GetComponent<BattleshipTileController>();
+       battleshipTileController.ChangeTileMaterialShipSunk();
+   }
+   
 }
