@@ -17,10 +17,10 @@ public class BattleshipGridController : MonoBehaviour
     
     
     // if [][] = "" unallocated, if [][] = "{ship_name}" then allocated
-    private const int ShipDimensionsX = 9;
-    private const int ShipDimensionsY = 9;
-    private String[,] grid = new String[ShipDimensionsY, ShipDimensionsX];
-    private bool[,] hasBeenHitGrid = new bool[ShipDimensionsY, ShipDimensionsX];
+    private const int GridDimensionsX = 9;
+    private const int GridDimensionsY = 9;
+    private String[,] grid = new String[GridDimensionsY, GridDimensionsX];
+    private bool[,] hasBeenHitGrid = new bool[GridDimensionsY, GridDimensionsX];
     private String[] shipNames = new String[]{"Destroyer", "Submarine", "Cruiser", "Battleship", "Carrier"};
     private int[] shipTileCount = new int[] { 2, 3, 3, 8, 5 };
     private GameObject[] shipPrefabs = new GameObject[5];
