@@ -601,7 +601,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linePrefab: {fileID: 7753833505691289535, guid: ef7fef6066d20c94a8721284e3258d1b,
     type: 3}
-  forceScale: 3
+  spawnLine: 0
+  forceScale: 1000
   yHitOffset: 3
   collidersToDisable:
   - {fileID: 135000011391776234}
