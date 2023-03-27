@@ -32,31 +32,26 @@ public class TictactoeGridController : MonoBehaviour
         rowNameToIndex.Add('C', 2);
     }
 
-    // TODO: Remove as not necessary at current time: only provides repeat hit feedback 
-    public bool RegisterHit(String tileName)
+    public bool RegisterHit(String tileName, bool hitFromUserTile)
     {
         // y, x
         Tuple<int, int> tileCoordinates = ConvertTileNameToCoordinates(tileName);
-        // check status of tile
-        bool isHit = CheckIfHit(tileCoordinates);
 
         bool alreadyHit = hasBeenHitGrid[tileCoordinates.Item1, tileCoordinates.Item2];
         // if new hit
-        if (!alreadyHit && isHit);
+        if (!alreadyHit)
+        {
+            hasBeenHitGrid[tileCoordinates.Item1, tileCoordinates.Item2] = true;
+            String userString = isUserX ? "X" : "O";
+            String opponentString = isUserX ? "O" : "X";
+            grid[tileCoordinates.Item1, tileCoordinates.Item2] = hitFromUserTile ? userString : opponentString;
+        }
         else
         {
             Debug.Log("Repeat hit at " + tileName);
         }
 
-        return isHit;
-    }
-    
-    bool CheckIfHit(Tuple<int, int> coordinates)
-    {
-        int y = coordinates.Item1;
-        int x = coordinates.Item2;
-        // if empty not a hit
-        return !string.IsNullOrEmpty(grid[y, x]);
+        return alreadyHit;
     }
     
     Tuple<int, int> ConvertTileNameToCoordinates(String tileName)

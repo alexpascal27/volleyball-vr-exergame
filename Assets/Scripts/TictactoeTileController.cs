@@ -28,16 +28,26 @@ public class TictactoeTileController : MonoBehaviour
             // Create tileName = {rowName}{tileNumber}
             String tileName = rowName + tilePrefab.name;
             // Get parent (grid)
-            GameObject parentGridPrefab = parentRowPrefab.transform.parent.gameObject;
+            GameObject entityPrefab = parentRowPrefab.transform.parent.gameObject;
+            GameObject parentGridPrefab = entityPrefab.transform.parent.gameObject;
             // Call RegisterGrid
             TictactoeGridController tictactoeGridController = parentGridPrefab.GetComponent<TictactoeGridController>();
 
             // Grid Feedback
-            bool isHit = tictactoeGridController.RegisterHit(tileName);
+            bool isUserTile = entityPrefab.name=="User";
+            bool alreadyHit = tictactoeGridController.RegisterHit(tileName, isUserTile);
+            if (alreadyHit) return;
             // Spawn X or O
             bool isUserX = tictactoeGridController.GetIsUserX();
-            Instantiate(isUserX ? xPrefab : oPrefab, transform.position, xPrefab.transform.rotation);
 
+            Vector3 transformPosition = transform.position;
+            // spawn user side
+            GameObject userPrefab = isUserX ? xPrefab : oPrefab;
+            GameObject opponentPrefab = isUserX ? oPrefab : xPrefab;
+            Instantiate(isUserTile ? userPrefab : opponentPrefab, transformPosition, xPrefab.transform.rotation);
+            // only spawn opponent side from user tiles
+            Instantiate(isUserTile ? userPrefab : opponentPrefab, new Vector3(transformPosition.x, transformPosition.y, -transformPosition.z), xPrefab.transform.rotation);
+            
             tileHit = true;
         }
     }
