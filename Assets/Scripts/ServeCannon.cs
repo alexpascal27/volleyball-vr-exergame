@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class ServeCannon : MonoBehaviour
 {
-    [SerializeField] public float power = 10f;
+    [SerializeField] public float maxPower = 10f;
+    // Whether to sometimes slow down speed
+    [SerializeField] public bool toRetardPower = false;
+    // Randomise offset percentage to figure out how much to retard power by
+    [SerializeField, Range(0f, 1f)] public float maxRetardOffset = 0f;
     [SerializeField] public GameObject ballPrefab;
     [SerializeField] public Transform shotPoint;
     [SerializeField] public Vector3 maxSuccessAngle;
@@ -34,11 +38,10 @@ public class ServeCannon : MonoBehaviour
             // Rotate by rotateVector
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + rotateVector);
             // Spawn ball
-            GameObject instatiatedBall = Instantiate(ballPrefab, shotPoint.position, shotPoint.rotation);
-            instatiatedBall.GetComponent<Rigidbody>().velocity = shotPoint.transform.up * power;
-            
-            
-            
+            GameObject instantiatedBall = Instantiate(ballPrefab, shotPoint.position, shotPoint.rotation);
+            float power = toRetardPower ? ApplyRetardation() : maxPower;
+            instantiatedBall.GetComponent<Rigidbody>().velocity = shotPoint.transform.up * power;
+
             // reset Timer
             currTimeCounter = delay;
         }
@@ -73,5 +76,11 @@ public class ServeCannon : MonoBehaviour
         float randomValue = UnityEngine.Random.Range(0f, 1f);
 
         return randomValue <= percentageOfMisses;
+    }
+
+    float ApplyRetardation()
+    {
+        float offset = UnityEngine.Random.Range(0f, maxRetardOffset);
+        return maxPower * (1f - offset);
     }
 }
