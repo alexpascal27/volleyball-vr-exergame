@@ -917,7 +917,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 80a6bae7122d17d4c9243b982a652788, type: 2}
+  - {fileID: 2100000, guid: 3f9336a53d1d2ea43895699cc52cb411, type: 2}
   - {fileID: 2100000, guid: 3f9336a53d1d2ea43895699cc52cb411, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1137,7 +1137,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 80a6bae7122d17d4c9243b982a652788, type: 2}
+  - {fileID: 2100000, guid: 3f9336a53d1d2ea43895699cc52cb411, type: 2}
   - {fileID: 2100000, guid: 3f9336a53d1d2ea43895699cc52cb411, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -4162,7 +4162,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 80a6bae7122d17d4c9243b982a652788, type: 2}
+  - {fileID: 2100000, guid: 3f9336a53d1d2ea43895699cc52cb411, type: 2}
   - {fileID: 2100000, guid: 3f9336a53d1d2ea43895699cc52cb411, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -4936,7 +4936,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 80a6bae7122d17d4c9243b982a652788, type: 2}
+  - {fileID: 2100000, guid: 3f9336a53d1d2ea43895699cc52cb411, type: 2}
   - {fileID: 2100000, guid: 3f9336a53d1d2ea43895699cc52cb411, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -5159,56 +5159,6 @@ PrefabInstance:
     - target: {fileID: 3569131836043310653, guid: 04fa3953f881d754a99a361a191414b1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: maxPower
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: toRetardPower
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: maxSuccessAngle.x
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: maxSuccessAngle.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: maxSuccessAngle.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: percentageOfMisses
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7873307584772717089, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 7873307584772717089, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 7873307584772717089, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7873307584772717089, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7873307584772717089, guid: 04fa3953f881d754a99a361a191414b1,
@@ -5527,36 +5477,6 @@ PrefabInstance:
     - target: {fileID: 3569131836043310653, guid: 04fa3953f881d754a99a361a191414b1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: maxPower
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: toRetardPower
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: maxSuccessAngle.x
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: maxSuccessAngle.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: maxSuccessAngle.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
-        type: 3}
-      propertyPath: percentageOfMisses
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7873307584772717089, guid: 04fa3953f881d754a99a361a191414b1,

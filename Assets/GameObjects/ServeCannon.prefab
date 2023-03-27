@@ -45,16 +45,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 633f90e0690654d499ea901eba70543d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPower: 10
+  maxPower: 20
   toRetardPower: 1
-  maxRetardOffset: 0.291
+  maxRetardOffset: 0.5
   ballPrefab: {fileID: 5267061180023506816, guid: a1cf43ccee7e50148a64881d6bf6777b,
     type: 3}
   defaultRotation: {x: 0, y: 0, z: 0}
   shotPoint: {fileID: 7873307584772717089}
-  maxSuccessAngle: {x: 15, y: 15, z: 0}
+  maxSuccessAngle: {x: 20, y: 20, z: 0}
   maxErrorAngle: {x: 30, y: 30, z: 0}
-  percentageOfMisses: 0.308
+  percentageOfMisses: 0.33
   delay: 2
 --- !u!1 &6460853185602031890
 GameObject:
