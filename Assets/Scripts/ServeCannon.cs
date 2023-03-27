@@ -10,6 +10,7 @@ public class ServeCannon : MonoBehaviour
     // Randomise offset percentage to figure out how much to retard power by
     [SerializeField, Range(0f, 1f)] public float maxRetardOffset = 0f;
     [SerializeField] public GameObject ballPrefab;
+    [SerializeField] public Vector3 defaultRotation = new Vector3(0f, 0f, 0f);
     [SerializeField] public Transform shotPoint;
     [SerializeField] public Vector3 maxSuccessAngle;
     [SerializeField] public Vector3 maxErrorAngle;
@@ -26,15 +27,14 @@ public class ServeCannon : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 rotateVector = new Vector3(0f, 0f, 0f);
         if (currTimeCounter <= 0f)
         {
             // Reset angle
-            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+            transform.rotation = Quaternion.Euler(defaultRotation);
             
             // Randomise angle
             bool miss = DetermineIfToMiss();
-            rotateVector = GenerateAngles(miss);
+            Vector3 rotateVector = GenerateAngles(miss);
             // Rotate by rotateVector
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + rotateVector);
             // Spawn ball
