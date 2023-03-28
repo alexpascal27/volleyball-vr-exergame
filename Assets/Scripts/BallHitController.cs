@@ -13,9 +13,6 @@ public class BallHitController : MonoBehaviour
     
     [SerializeField] public float yHitOffset = 3f;
     
-    [SerializeField] public Collider[] collidersToDisable;
-    [SerializeField] public Collider[] collidersToEnable;
-    
     private Vector3 reflectionDirection;
 
     private Rigidbody controllerRigidbody;
@@ -39,17 +36,6 @@ public class BallHitController : MonoBehaviour
     private void Start()
     {
         controllerRigidbody = GetComponent<Rigidbody>();
-        
-        // Enable and Disable Colliders 
-        foreach (Collider colliderToDisable in collidersToDisable)
-        {
-            colliderToDisable.enabled = false;
-        }
-
-        foreach (Collider colliderToEnable in collidersToEnable)
-        {
-            colliderToEnable.enabled = true;
-        }
     }
 
     private void OnCollisionEnter(Collision collision)
