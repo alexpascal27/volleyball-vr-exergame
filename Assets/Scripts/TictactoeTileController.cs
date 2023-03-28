@@ -46,7 +46,7 @@ public class TictactoeTileController : MonoBehaviour
             GameObject opponentPrefab = isUserX ? oPrefab : xPrefab;
             Instantiate(isUserTile ? userPrefab : opponentPrefab, transformPosition, xPrefab.transform.rotation);
             // only spawn opponent side from user tiles
-            Instantiate(isUserTile ? userPrefab : opponentPrefab, new Vector3(transformPosition.x, transformPosition.y, -transformPosition.z), xPrefab.transform.rotation);
+            Instantiate(isUserTile ? userPrefab : opponentPrefab, new Vector3(isUserTile? transformPosition.x + 15f : transformPosition.x - 15f, transformPosition.y, -transformPosition.z), xPrefab.transform.rotation);
             
             tileHit = true;
         }
