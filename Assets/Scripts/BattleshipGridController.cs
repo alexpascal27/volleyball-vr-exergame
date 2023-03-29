@@ -10,10 +10,8 @@ public class BattleshipGridController : MonoBehaviour
     [SerializeField] private bool zDescending = true;
     // if when moving From A to B, we are increasing in X value or not
     [SerializeField] private bool xAscending = true;
-    [SerializeField] private GameObject shipPrefab;
-    [SerializeField] private float yShipSpawnOffset = 0.5f;
-    [SerializeField] private float scaleOffset = 0.3f;
     [SerializeField] private Material shipSinkMaterial;
+    [SerializeField] private GameObject[] shipModelPrefabs;
     
     
     // if [][] = "" unallocated, if [][] = "{ship_name}" then allocated
@@ -24,13 +22,13 @@ public class BattleshipGridController : MonoBehaviour
     private String[] shipNames = new String[]{"Destroyer", "Submarine", "Cruiser", "Battleship", "Carrier"};
     private int[] shipTileCount = new int[] { 2, 3, 3, 8, 5 };
     private GameObject[] shipPrefabs = new GameObject[5];
-    private Tuple<int, int>[] shipSizes = new Tuple<int, int>[5]
+    private Tuple<int, int>[] shipSizes = new Tuple<int, int>[]
     {
-        new Tuple<int, int>(1, 2),
-        new Tuple<int, int>(1, 3),
-        new Tuple<int, int>(1, 3),
-        new Tuple<int, int>(2, 4),
-        new Tuple<int, int>(1, 5)
+        new Tuple<int, int>(1, 2), // https://www.cgtrader.com/free-3d-models/watercraft/industrial-watercraft/polygrunt-low-poly-boat-or-water-craft-or-sea-vehicle
+        new Tuple<int, int>(1, 3), // https://www.cgtrader.com/free-3d-models/watercraft/military-watercraft/war-ship-ae93c071-d5d0-44a3-9100-eae86b5b5182
+        new Tuple<int, int>(1, 3), // ^
+        new Tuple<int, int>(2, 4), // https://www.cgtrader.com/free-3d-models/watercraft/industrial-watercraft/toon-ship
+        new Tuple<int, int>(1, 5) // https://www.cgtrader.com/free-3d-models/watercraft/industrial-watercraft/low-poly-cargo-ship-688d0170-b2eb-4198-9f09-22b6aee72249
     };
 
     private Dictionary<char, int> rowNameToIndex = new Dictionary<char, int>();
@@ -157,14 +155,15 @@ public class BattleshipGridController : MonoBehaviour
         // Find origin point by doing (x + shipSizeX/2, z + shipSizeZ/2)
         float originX = xAscending ? gridOrigin.x + x + shipSizeX / 2 : gridOrigin.x - x - shipSizeX / 2;
         float originZ = zDescending ? gridOrigin.z - z - shipSizeZ / 2 : gridOrigin.z + z + shipSizeZ / 2;
-        Vector3 origin = new Vector3(originX, yShipSpawnOffset, originZ);
+        Vector3 origin = new Vector3(originX, 0f, originZ);
         // Instantiate
-        GameObject instantiatedShipPrefab = Instantiate(shipPrefab, origin, shipPrefab.transform.rotation);
+        // Rotate if horizontal
+        Vector3 defaultShipPrefabRotation = shipModelPrefabs[shipIndex].transform.rotation.eulerAngles;
+        GameObject instantiatedShipPrefab = Instantiate(shipModelPrefabs[shipIndex], origin, isHorizontal ? Quaternion.Euler(new Vector3(defaultShipPrefabRotation.x, defaultShipPrefabRotation.y - 90f ,defaultShipPrefabRotation.z))  : Quaternion.Euler(defaultShipPrefabRotation));
+        
+        // weird offset that needs to be applied only to 5th ship
+        if (shipIndex == 4) instantiatedShipPrefab.transform.position = new Vector3(isHorizontal ? origin.x - 1f : origin.x, origin.y, isHorizontal ? origin.z : origin.z + 1f);
         instantiatedShipPrefab.name = shipNames[shipIndex];
-        // Rotate if vertical
-        // TODO: when you add an actual model, not important now as just cube
-        // Set scale based on shipSize
-        instantiatedShipPrefab.transform.localScale = new Vector3(shipSizeX - scaleOffset, instantiatedShipPrefab.transform.localScale.y, shipSizeZ - scaleOffset);
         shipPrefabs[shipIndex] = instantiatedShipPrefab;
     }
    
@@ -219,7 +218,7 @@ public class BattleshipGridController : MonoBehaviour
        if (isWholeShipSunk)
        {
            ChangeShipMaterial(shipIndex);
-           //ChangeTileMaterial(y, x);
+           ChangeTileMaterial(y, x);
        }
        
    }
@@ -237,8 +236,11 @@ public class BattleshipGridController : MonoBehaviour
    void ChangeShipMaterial(int shipIndex)
    {
        GameObject currentShipPrefab = shipPrefabs[shipIndex];
-       MeshRenderer renderer = currentShipPrefab.GetComponent<MeshRenderer>();
-       renderer.material = shipSinkMaterial;
+       Renderer[] renderers = currentShipPrefab.GetComponentsInChildren<Renderer>();
+       foreach (Renderer renderer in renderers)
+       {
+           renderer.material = shipSinkMaterial;
+       }
    }
 
    void ChangeTileMaterial(int y, int x)
