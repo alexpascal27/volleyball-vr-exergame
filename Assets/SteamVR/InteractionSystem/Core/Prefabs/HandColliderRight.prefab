@@ -597,7 +597,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000013185594350}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d72a2dc7d38bd9446b216e24aadff86a, type: 3}
   m_Name: 
@@ -605,7 +605,7 @@ MonoBehaviour:
   linePrefab: {fileID: 7753833505691289535, guid: ef7fef6066d20c94a8721284e3258d1b,
     type: 3}
   spawnLine: 0
-  forceScale: 1000
+  forceScale: 10
   yHitOffset: 3
 --- !u!114 &4904263813191268017
 MonoBehaviour:
@@ -635,7 +635,7 @@ MonoBehaviour:
   - {fileID: 135000011940042238}
   - {fileID: 135000012264633464}
   - {fileID: 135000012669751932}
-  - {fileID: 2058935185695798796}
+  - {fileID: 221960535212833416}
   collidersToEnable:
   - {fileID: 1669895353005338786}
 --- !u!114 &2186630333943035547
@@ -668,7 +668,7 @@ MonoBehaviour:
   - {fileID: 135000012669751932}
   - {fileID: 1669895353005338786}
   collidersToEnable:
-  - {fileID: 2058935185695798796}
+  - {fileID: 221960535212833416}
 --- !u!1 &1000013323899228
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,7 +966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8880686946120893286}
-  - component: {fileID: 2058935185695798796}
+  - component: {fileID: 221960535212833416}
   m_Layer: 0
   m_Name: receivePlatform
   m_TagString: Untagged
@@ -982,15 +982,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4708048859734850262}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0024, y: 0.0019, z: -0.2011}
+  m_LocalPosition: {x: -0.0024, y: 0.0019, z: -0.2251}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4000010266578624}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2058935185695798796
-CapsuleCollider:
+--- !u!65 &221960535212833416
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -999,9 +999,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 0
-  m_Radius: 0.05
-  m_Height: 0.5
-  m_Direction: 2
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.13, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6428940655083180738
 GameObject:

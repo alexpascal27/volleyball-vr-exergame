@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 
 public class TictactoeTileController : MonoBehaviour
 {
+    public GameObject userTilesPrefab;
     [SerializeField] private GameObject xPrefab;
     [SerializeField] private GameObject oPrefab;
 
@@ -44,10 +46,9 @@ public class TictactoeTileController : MonoBehaviour
             // spawn user side
             GameObject userPrefab = isUserX ? xPrefab : oPrefab;
             GameObject opponentPrefab = isUserX ? oPrefab : xPrefab;
-            Instantiate(isUserTile ? userPrefab : opponentPrefab, transformPosition, xPrefab.transform.rotation);
+            Instantiate(isUserTile ? userPrefab : opponentPrefab, transformPosition, xPrefab.transform.rotation, isUserTile ? userTilesPrefab.transform : parentGridPrefab.transform);
             // only spawn opponent side from user tiles
-            Instantiate(isUserTile ? userPrefab : opponentPrefab, new Vector3(isUserTile? transformPosition.x + 15f : transformPosition.x - 15f, transformPosition.y, -transformPosition.z), xPrefab.transform.rotation);
-            
+            Instantiate(isUserTile ? userPrefab : opponentPrefab, new Vector3(isUserTile? transformPosition.x + 15f : transformPosition.x - 15f, transformPosition.y, -transformPosition.z), xPrefab.transform.rotation, isUserX ? userTilesPrefab.transform : entityPrefab.transform);
             tileHit = true;
         }
     }
