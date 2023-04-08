@@ -186,7 +186,11 @@ MonoBehaviour:
     type: 3}
   defaultRotation: {x: 30, y: 180, z: 40}
   shotPoint: {fileID: 5845362729810505195}
-  passTargetPoint: {x: 3.8, y: 3.2, z: 0.5}
-  timeToGetToTarget: 1
+  basePassTargetPoint: {x: 3.8, y: 3.5, z: 1}
+  leewayFromBaseTargetPoint: {x: 0, y: 0, z: 0}
+  timeToGetToTarget: 1.57
   targetPrefab: {fileID: 4139635946821059049, guid: 683b8d68306f1ac42a2abd3e464e703f,
     type: 3}
+  hitterPrefab: {fileID: 3877962660728287249, guid: 8d1fbf480cffced469ecd5c5f0348e45,
+    type: 3}
+  hitterPositionOffset: {x: 0.4, y: -1.6, z: 0.3}

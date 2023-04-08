@@ -161,7 +161,7 @@ Transform:
   - {fileID: 1926275762}
   - {fileID: 1912526546}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &95969350
 GameObject:
@@ -651,6 +651,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474501359}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &483260791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 413038416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &483260794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483260791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188716eafe5f77840a0ec803ee97a443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetFrameRate: 10
 --- !u!1 &524050808
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +1016,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -1652,12 +1671,12 @@ PrefabInstance:
     - target: {fileID: 3569131836043310650, guid: 04fa3953f881d754a99a361a191414b1,
         type: 3}
       propertyPath: m_Name
-      value: ServeCannon (1)
+      value: BlockEmulationCannon
       objectReference: {fileID: 0}
     - target: {fileID: 3569131836043310653, guid: 04fa3953f881d754a99a361a191414b1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3569131836043310653, guid: 04fa3953f881d754a99a361a191414b1,
         type: 3}
@@ -1712,7 +1731,7 @@ PrefabInstance:
     - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
         type: 3}
       propertyPath: delay
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
         type: 3}
@@ -2508,7 +2527,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1973718280
 PrefabInstance:
