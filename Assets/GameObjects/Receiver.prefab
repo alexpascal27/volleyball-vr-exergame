@@ -186,8 +186,8 @@ MonoBehaviour:
     type: 3}
   defaultRotation: {x: 30, y: 180, z: 40}
   shotPoint: {fileID: 5845362729810505195}
-  basePassTargetPoint: {x: 3.8, y: 3.5, z: 1}
-  leewayFromBaseTargetPoint: {x: 0, y: 0, z: 0}
+  basePassTargetPoint: {x: 0, y: 3.5, z: 1}
+  leewayFromBaseTargetPoint: {x: 3.8, y: 0, z: 0}
   timeToGetToTarget: 1.57
   targetPrefab: {fileID: 4139635946821059049, guid: 683b8d68306f1ac42a2abd3e464e703f,
     type: 3}

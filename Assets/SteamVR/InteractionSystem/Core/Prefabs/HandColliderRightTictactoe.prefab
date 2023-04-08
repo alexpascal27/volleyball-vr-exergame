@@ -513,8 +513,9 @@ GameObject:
   - component: {fileID: 54000012734507470}
   - component: {fileID: 885844280435465016}
   - component: {fileID: 4904263813191268017}
+  - component: {fileID: 2186630333943035547}
   m_Layer: 8
-  m_Name: HandColliderRight
+  m_Name: HandColliderRightTictactoe
   m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -534,7 +535,7 @@ Transform:
   m_Children:
   - {fileID: 4000013405616328}
   - {fileID: 4000013061167466}
-  - {fileID: 7205908835032295315}
+  - {fileID: 8880686946120893286}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -612,6 +613,37 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000013185594350}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14db1b3d26a4043489e1d0b617a6de96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidersToDisable:
+  - {fileID: 135000011391776234}
+  - {fileID: 135000011041469328}
+  - {fileID: 135000014001595118}
+  - {fileID: 135000010572779464}
+  - {fileID: 135000014056040094}
+  - {fileID: 135000010681374130}
+  - {fileID: 135000013433154566}
+  - {fileID: 135000012638609432}
+  - {fileID: 135000012638216756}
+  - {fileID: 135000012013325142}
+  - {fileID: 135000010522680132}
+  - {fileID: 135000014207960770}
+  - {fileID: 135000011940042238}
+  - {fileID: 135000012264633464}
+  - {fileID: 135000012669751932}
+  - {fileID: 221960535212833416}
+  collidersToEnable:
+  - {fileID: 0}
+--- !u!114 &2186630333943035547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013185594350}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14db1b3d26a4043489e1d0b617a6de96, type: 3}
@@ -635,7 +667,7 @@ MonoBehaviour:
   - {fileID: 135000012669751932}
   - {fileID: 0}
   collidersToEnable:
-  - {fileID: 1669895353005338786}
+  - {fileID: 221960535212833416}
 --- !u!1 &1000013323899228
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,7 +956,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.01
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &6428940655083180738
+--- !u!1 &4708048859734850262
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -932,40 +964,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7205908835032295315}
-  - component: {fileID: 1669895353005338786}
+  - component: {fileID: 8880686946120893286}
+  - component: {fileID: 221960535212833416}
   m_Layer: 0
-  m_Name: hitPlatform
+  m_Name: receivePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7205908835032295315
+--- !u!4 &8880686946120893286
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6428940655083180738}
+  m_GameObject: {fileID: 4708048859734850262}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0024, y: 0.0019, z: 0.0589}
-  m_LocalScale: {x: 1, y: 1.5, z: 1}
+  m_LocalPosition: {x: -0.0024, y: 0.0019, z: -0.2251}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4000010266578624}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1669895353005338786
+--- !u!65 &221960535212833416
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6428940655083180738}
+  m_GameObject: {fileID: 4708048859734850262}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.05, y: 0.1, z: 0.2}
+  m_Size: {x: 0.05, y: 0.13, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0}
