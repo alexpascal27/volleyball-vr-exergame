@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,8 @@ public class ServeCannon : MonoBehaviour
     [SerializeField] public Vector3 maxErrorAngle;
     [SerializeField, Range(0f, 1f)] public float percentageOfMisses = 0f;
     [SerializeField] public float delay = 2.0f;
+
+    public GameObject targetPrefab;
     
     private float currTimeCounter;
 
@@ -40,8 +43,13 @@ public class ServeCannon : MonoBehaviour
             // Spawn ball
             GameObject instantiatedBall = Instantiate(ballPrefab, shotPoint.position, shotPoint.rotation);
             float power = toRetardPower ? ApplyRetardation() : maxPower;
-            instantiatedBall.GetComponent<Rigidbody>().velocity = shotPoint.transform.up * power;
-
+            
+            Rigidbody rb = instantiatedBall.GetComponent<Rigidbody>();
+            rb.velocity = shotPoint.transform.up * power;
+            
+            Vector3 predictedPosition = PredictPositionGivenY(rb, 0f);
+            Instantiate(targetPrefab, predictedPosition, targetPrefab.transform.rotation);
+            
             // reset Timer
             currTimeCounter = delay;
         }
@@ -82,5 +90,30 @@ public class ServeCannon : MonoBehaviour
     {
         float offset = UnityEngine.Random.Range(0f, maxRetardOffset);
         return maxPower * (1f - offset);
+    }
+
+    // Assumes no obstacles in the way
+    Vector3 PredictPositionGivenY(Rigidbody rb, float yCoordinate)
+    {
+        Vector3 r0 = rb.position;
+        Vector3 v0 = rb.velocity;
+        Vector3 a = new Vector3(0, -9.8f, 0);
+        float t0 = (-v0.y + Mathf.Sqrt(Mathf.Pow(v0.y, 2) - 2 * a.y * (r0.y - yCoordinate))) / a.y;
+        float t1 = (-v0.y - Mathf.Sqrt(Mathf.Pow(v0.y, 2) - 2 * a.y * (r0.y - yCoordinate))) / a.y;
+        
+        // need t1
+        if(t0 < 0 && t1 > 0)
+        {
+            return r0 + v0 * t1 + a * Mathf.Pow(t1, 2) / 2;
+        }
+        // need t0
+        if(t0 > 0 && t1 < 0)
+        {
+            return r0 + v0 * t0 + a * Mathf.Pow(t1, 2) / 2;
+        }
+        
+        // something wrong
+        Debug.LogError("BOTH T0 and T1 below 0:     t0: " + t0 + "    And  t1: " + t1);
+        return r0;
     }
 }
