@@ -19,13 +19,32 @@ public class PassCannon : MonoBehaviour
     public GameObject hitterPrefab;
     // a bit to the left, much lower and behind
     public Vector3 hitterPositionOffset = new Vector3(0.4f, -1.6f, 0.5f);
+    
+    public GameObject paddlePrefab;
+    // higher and a bit behind
+    public Vector3 paddlePositionOffset = new Vector3(0, 2f, 1f);
 
-    private BoxCollider boxCollider;
-    private int counter = 0;
+    public float timeBeforeHitToSpawnPaddle = 0.5f;
+    private float timeLeft;
+    private bool canDeduct = false;
+    private Vector3 targetPoint;
 
-    private void Start()
+    private void Update()
     {
-        boxCollider = GetComponent<BoxCollider>();
+        if (canDeduct && timeLeft > timeBeforeHitToSpawnPaddle)
+        {
+            timeLeft -= Time.deltaTime;
+            Debug.Log(timeLeft);
+        }
+        if(canDeduct && timeLeft <= timeBeforeHitToSpawnPaddle)
+        {
+            Debug.Log("Spawning paddle");
+            GameObject instantiatedPaddle = Instantiate(paddlePrefab, targetPoint + paddlePositionOffset, paddlePrefab.transform.rotation);
+            Rigidbody paddleRb = instantiatedPaddle.GetComponent<Rigidbody>();
+            Vector3 predictedVelocity = PredictVelocityGivenFinalPosition(paddleRb, targetPoint + new Vector3(0,0, 0.1f), timeBeforeHitToSpawnPaddle);
+            paddleRb.velocity = predictedVelocity;
+            canDeduct = false;
+        }
     }
 
     // Update is called once per frame
@@ -34,15 +53,11 @@ public class PassCannon : MonoBehaviour
         GameObject go = collision.gameObject;
         if (go.CompareTag("Ball"))
         {
-            if (counter == 0)
-            {
-                counter++;
-                // Destroy ball and spawn new one to make receiving control easier
-                Destroy(go);
-                boxCollider.enabled = false;
-                Shoot();
-            }
-            
+            // Destroy ball and spawn new one to make receiving control easier
+            Destroy(go);
+            timeLeft = timeToGetToTarget;
+            canDeduct = true;
+            Shoot();
         }
     }
 
@@ -50,12 +65,12 @@ public class PassCannon : MonoBehaviour
     {
         // Spawn ball
         GameObject instantiatedBall = Instantiate(ballPrefab, shotPoint.position, Quaternion.Euler(Vector3.zero));
-        Rigidbody rb = instantiatedBall.GetComponent<Rigidbody>();
-        Vector3 targetPoint = GenerateTargetPointAlongNet();
-        Vector3 predictedVelocity = PredictVelocityGivenFinalPosition(rb, targetPoint, timeToGetToTarget);
-        rb.velocity = predictedVelocity;
+        Rigidbody ballRb = instantiatedBall.GetComponent<Rigidbody>();
+        targetPoint = GenerateTargetPointAlongNet();
+        Vector3 predictedVelocity = PredictVelocityGivenFinalPosition(ballRb, targetPoint, timeToGetToTarget);
+        ballRb.velocity = predictedVelocity;
         
-        Instantiate(targetPrefab, targetPoint, targetPrefab.transform.rotation);
+        //Instantiate(targetPrefab, targetPoint, targetPrefab.transform.rotation);
         Instantiate(hitterPrefab, targetPoint + hitterPositionOffset, hitterPrefab.transform.rotation);
     }
 

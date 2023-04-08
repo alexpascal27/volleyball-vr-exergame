@@ -669,7 +669,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188716eafe5f77840a0ec803ee97a443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFrameRate: 10
 --- !u!1 &524050808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,7 +1730,7 @@ PrefabInstance:
     - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
         type: 3}
       propertyPath: delay
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
         type: 3}
