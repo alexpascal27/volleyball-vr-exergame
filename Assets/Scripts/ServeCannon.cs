@@ -48,7 +48,7 @@ public class ServeCannon : MonoBehaviour
             rb.velocity = shotPoint.transform.up * power;
             
             Vector3 predictedPosition = PredictPositionGivenY(rb, 0f);
-            Instantiate(targetPrefab, predictedPosition, targetPrefab.transform.rotation);
+            if(targetPrefab) Instantiate(targetPrefab, predictedPosition + new Vector3(0, 0.6f, 0), targetPrefab.transform.rotation);
             
             // reset Timer
             currTimeCounter = delay;
