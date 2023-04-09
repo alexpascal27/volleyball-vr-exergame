@@ -23,11 +23,16 @@ public class PassCannon : MonoBehaviour
     public GameObject paddlePrefab;
     // higher and a bit behind
     public Vector3 paddlePositionOffset = new Vector3(0, 2f, 1f);
-
     public float timeBeforeHitToSpawnPaddle = 0.5f;
+    
+    [SerializeField, Range(0f, 1f)] public float percentageOfMisses = 0f;
+    [SerializeField] public Vector3 maxErrorRange;
+    
+    
     private float timeLeft;
     private bool canDeduct = false;
     private Vector3 targetPoint;
+    private bool miss;
 
     private void Update()
     {
@@ -38,15 +43,17 @@ public class PassCannon : MonoBehaviour
         }
         if(canDeduct && timeLeft <= timeBeforeHitToSpawnPaddle)
         {
-            Debug.Log("Spawning paddle");
-            GameObject instantiatedPaddle = Instantiate(paddlePrefab, targetPoint + paddlePositionOffset, paddlePrefab.transform.rotation);
-            Rigidbody paddleRb = instantiatedPaddle.GetComponent<Rigidbody>();
-            Vector3 predictedVelocity = PredictVelocityGivenFinalPosition(paddleRb, targetPoint + new Vector3(0,0, 0.1f), timeBeforeHitToSpawnPaddle);
-            paddleRb.velocity = predictedVelocity;
-            canDeduct = false;
+            if (!miss)
+            {
+               GameObject instantiatedPaddle = Instantiate(paddlePrefab, targetPoint + paddlePositionOffset, paddlePrefab.transform.rotation);
+               Rigidbody paddleRb = instantiatedPaddle.GetComponent<Rigidbody>();
+               Vector3 predictedVelocity = PredictVelocityGivenFinalPosition(paddleRb, targetPoint + new Vector3(0,0, 0.1f), timeBeforeHitToSpawnPaddle);
+               paddleRb.velocity = predictedVelocity;
+               canDeduct = false; 
+            }
         }
     }
-
+    
     // Update is called once per frame
     private void OnCollisionEnter(Collision collision)
     {
@@ -63,11 +70,13 @@ public class PassCannon : MonoBehaviour
 
     void Shoot()
     {
+        miss = DetermineIfToMiss(); 
+        targetPoint = GenerateTargetPointAlongNet();
         // Spawn ball
         GameObject instantiatedBall = Instantiate(ballPrefab, shotPoint.position, Quaternion.Euler(Vector3.zero));
         Rigidbody ballRb = instantiatedBall.GetComponent<Rigidbody>();
-        targetPoint = GenerateTargetPointAlongNet();
-        Vector3 predictedVelocity = PredictVelocityGivenFinalPosition(ballRb, targetPoint, timeToGetToTarget);
+        
+        Vector3 predictedVelocity = PredictVelocityGivenFinalPosition(ballRb, miss ? GenerateRandomTarget() : targetPoint, timeToGetToTarget);
         ballRb.velocity = predictedVelocity;
         
         //Instantiate(targetPrefab, targetPoint, targetPrefab.transform.rotation);
@@ -91,4 +100,22 @@ public class PassCannon : MonoBehaviour
 
         return (r - r0 - (a * Mathf.Pow(t, 2)) / 2) / t;
     }
+    
+    bool DetermineIfToMiss()
+    {
+        // randomise between 0 and 1, and see if miss (between 0 and percentageOfMisses) or not
+        float randomValue = UnityEngine.Random.Range(0f, 1f);
+
+        return randomValue <= percentageOfMisses;
+    }
+    
+    Vector3 GenerateRandomTarget()
+    {
+        float x, y, z;
+        x = UnityEngine.Random.Range(-maxErrorRange.x, maxErrorRange.x);
+        y = UnityEngine.Random.Range(-maxErrorRange.y, maxErrorRange.y);
+        z = UnityEngine.Random.Range(-maxErrorRange.z, maxErrorRange.z);
+        return new Vector3(x, y, z);
+    }
+
 }
