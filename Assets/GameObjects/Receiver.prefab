@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 4139635946821059047}
   - component: {fileID: 4139635946821059046}
   - component: {fileID: 4139635946821059042}
-  - component: {fileID: 5420956598260975251}
   - component: {fileID: 3967785947685357013}
   m_Layer: 0
   m_Name: Receiver
@@ -145,32 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killDelay: 2
---- !u!114 &5420956598260975251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4139635946821059049}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 633f90e0690654d499ea901eba70543d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxPower: 10
-  toRetardPower: 0
-  maxRetardOffset: 0
-  ballPrefab: {fileID: 5267061180023506816, guid: 7a7e8d4bbac5ed04dbbe5a132b5e6075,
-    type: 3}
-  defaultRotation: {x: 0, y: 0, z: 0}
-  shotPoint: {fileID: 5845362729810505195}
-  maxSuccessAngle: {x: 0, y: 0, z: 0}
-  maxErrorAngle: {x: 0, y: 0, z: 0}
-  percentageOfMisses: 0
-  delay: 2
-  percentageOfReceiveMisses: 0
-  maxReceiveErrorRange: {x: 0, y: 0, z: 0}
-  targetPrefab: {fileID: 0}
 --- !u!114 &3967785947685357013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,18 +161,18 @@ MonoBehaviour:
     type: 3}
   defaultRotation: {x: 30, y: 180, z: 40}
   shotPoint: {fileID: 5845362729810505195}
-  basePassTargetPoint: {x: 0, y: 3.5, z: 1}
+  basePassTargetPoint: {x: 0, y: 3, z: 1}
   leewayFromBaseTargetPoint: {x: 3.8, y: 0, z: 0}
-  timeToGetToTarget: 1.57
+  timeToGetToTarget: 1.6
   targetPrefab: {fileID: 4139635946821059049, guid: 683b8d68306f1ac42a2abd3e464e703f,
     type: 3}
   hitterPrefab: {fileID: 3877962660728287249, guid: 8d1fbf480cffced469ecd5c5f0348e45,
     type: 3}
-  hitterPositionOffset: {x: 0.4, y: -1.6, z: 0.3}
+  hitterPositionOffset: {x: 0.4, y: -1.7, z: 0.3}
   paddlePrefab: {fileID: 8791815076086745505, guid: d0d80a4a92057b84baa27200581a1292,
     type: 3}
-  paddlePositionOffset: {x: 0, y: 0, z: 10}
+  paddlePositionOffset: {x: 0, y: 0, z: 8}
   timeBeforeHitToSpawnPaddle: 0.5
   percentageOfReceiveMisses: 0
   maxReceiveErrorRange: {x: 0, y: 0, z: 0}
-  percentageOfHitMisses: 1
+  percentageOfHitMisses: 0
