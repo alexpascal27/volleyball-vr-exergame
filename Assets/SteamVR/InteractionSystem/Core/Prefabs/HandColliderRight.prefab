@@ -633,7 +633,6 @@ MonoBehaviour:
   - {fileID: 135000011940042238}
   - {fileID: 135000012264633464}
   - {fileID: 135000012669751932}
-  - {fileID: 0}
   collidersToEnable:
   - {fileID: 1669895353005338786}
 --- !u!1 &1000013323899228

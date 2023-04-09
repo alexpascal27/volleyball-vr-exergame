@@ -806,7 +806,7 @@ MonoBehaviour:
   - {fileID: 135000010489002386}
   - {fileID: 135000010608582948}
   collidersToEnable:
-  - {fileID: 0}
+  - {fileID: 8079786520153586281}
 --- !u!114 &1926210993490841155
 MonoBehaviour:
   m_ObjectHideFlags: 0

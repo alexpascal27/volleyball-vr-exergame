@@ -62,8 +62,8 @@ Transform:
   m_GameObject: {fileID: 4139635946821059049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.4, y: 1, z: 0.5}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5845362729810505195}
   m_Father: {fileID: 0}
@@ -160,7 +160,7 @@ MonoBehaviour:
   maxPower: 10
   toRetardPower: 0
   maxRetardOffset: 0
-  ballPrefab: {fileID: 5267061180023506816, guid: a1cf43ccee7e50148a64881d6bf6777b,
+  ballPrefab: {fileID: 5267061180023506816, guid: 7a7e8d4bbac5ed04dbbe5a132b5e6075,
     type: 3}
   defaultRotation: {x: 0, y: 0, z: 0}
   shotPoint: {fileID: 5845362729810505195}
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPower: 10
-  ballPrefab: {fileID: 5267061180023506816, guid: a1cf43ccee7e50148a64881d6bf6777b,
+  ballPrefab: {fileID: 5267061180023506816, guid: 7a7e8d4bbac5ed04dbbe5a132b5e6075,
     type: 3}
   defaultRotation: {x: 30, y: 180, z: 40}
   shotPoint: {fileID: 5845362729810505195}
@@ -196,5 +196,7 @@ MonoBehaviour:
   hitterPositionOffset: {x: 0.4, y: -1.6, z: 0.3}
   paddlePrefab: {fileID: 8791815076086745505, guid: d0d80a4a92057b84baa27200581a1292,
     type: 3}
-  paddlePositionOffset: {x: 0, y: 0, z: 7}
+  paddlePositionOffset: {x: 0, y: 0, z: 10}
   timeBeforeHitToSpawnPaddle: 0.5
+  percentageOfMisses: 0.2
+  maxErrorRange: {x: 5, y: 5, z: 9}

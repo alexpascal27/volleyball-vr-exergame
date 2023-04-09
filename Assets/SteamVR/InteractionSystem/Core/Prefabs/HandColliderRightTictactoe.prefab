@@ -512,7 +512,6 @@ GameObject:
   - component: {fileID: 114000013167804218}
   - component: {fileID: 54000012734507470}
   - component: {fileID: 885844280435465016}
-  - component: {fileID: 4904263813191268017}
   - component: {fileID: 2186630333943035547}
   m_Layer: 8
   m_Name: HandColliderRightTictactoe
@@ -606,37 +605,6 @@ MonoBehaviour:
   spawnLine: 0
   forceScale: 10
   yHitOffset: 3
---- !u!114 &4904263813191268017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000013185594350}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14db1b3d26a4043489e1d0b617a6de96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collidersToDisable:
-  - {fileID: 135000011391776234}
-  - {fileID: 135000011041469328}
-  - {fileID: 135000014001595118}
-  - {fileID: 135000010572779464}
-  - {fileID: 135000014056040094}
-  - {fileID: 135000010681374130}
-  - {fileID: 135000013433154566}
-  - {fileID: 135000012638609432}
-  - {fileID: 135000012638216756}
-  - {fileID: 135000012013325142}
-  - {fileID: 135000010522680132}
-  - {fileID: 135000014207960770}
-  - {fileID: 135000011940042238}
-  - {fileID: 135000012264633464}
-  - {fileID: 135000012669751932}
-  - {fileID: 221960535212833416}
-  collidersToEnable:
-  - {fileID: 0}
 --- !u!114 &2186630333943035547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,7 +633,6 @@ MonoBehaviour:
   - {fileID: 135000011940042238}
   - {fileID: 135000012264633464}
   - {fileID: 135000012669751932}
-  - {fileID: 0}
   collidersToEnable:
   - {fileID: 221960535212833416}
 --- !u!1 &1000013323899228
