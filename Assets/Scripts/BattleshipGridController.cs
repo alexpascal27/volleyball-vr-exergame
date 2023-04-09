@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class BattleshipGridController : MonoBehaviour
 {
+    public bool isUser;
     [SerializeField] private Vector3 gridOrigin = new Vector3(-4.5f, 0.0f, 9.1f);
     // if when moving From A to B, we are decreasing in Z value or not
     [SerializeField] private bool zDescending = true;
@@ -37,6 +39,23 @@ public class BattleshipGridController : MonoBehaviour
     {
         InitGrid();
         InitRowNameToIndexDictionary();
+    }
+
+    void Update()
+    {
+        // check if all sunk
+        bool allShipsSunk = shipTileCount.Sum() == 0;
+        if (allShipsSunk)
+        {
+            if (isUser)
+            {
+                Debug.Log("Won");
+            }
+            else
+            {
+                Debug.Log("Lost");
+            }
+        }
     }
 
     void InitGrid()
