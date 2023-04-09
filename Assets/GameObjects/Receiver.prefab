@@ -168,6 +168,8 @@ MonoBehaviour:
   maxErrorAngle: {x: 0, y: 0, z: 0}
   percentageOfMisses: 0
   delay: 2
+  percentageOfReceiveMisses: 0
+  maxReceiveErrorRange: {x: 0, y: 0, z: 0}
   targetPrefab: {fileID: 0}
 --- !u!114 &3967785947685357013
 MonoBehaviour:
@@ -198,5 +200,6 @@ MonoBehaviour:
     type: 3}
   paddlePositionOffset: {x: 0, y: 0, z: 10}
   timeBeforeHitToSpawnPaddle: 0.5
-  percentageOfMisses: 0.2
-  maxErrorRange: {x: 5, y: 5, z: 9}
+  percentageOfReceiveMisses: 0
+  maxReceiveErrorRange: {x: 0, y: 0, z: 0}
+  percentageOfHitMisses: 1
