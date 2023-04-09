@@ -159,10 +159,10 @@ public class BattleshipGridController : MonoBehaviour
         // Instantiate
         // Rotate if horizontal
         Vector3 defaultShipPrefabRotation = shipModelPrefabs[shipIndex].transform.rotation.eulerAngles;
-        GameObject instantiatedShipPrefab = Instantiate(shipModelPrefabs[shipIndex], origin, isHorizontal ? Quaternion.Euler(new Vector3(defaultShipPrefabRotation.x, defaultShipPrefabRotation.y - 90f ,defaultShipPrefabRotation.z))  : Quaternion.Euler(defaultShipPrefabRotation));
+        GameObject instantiatedShipPrefab = Instantiate(shipModelPrefabs[shipIndex], origin + transform.position, isHorizontal ? Quaternion.Euler(new Vector3(defaultShipPrefabRotation.x, defaultShipPrefabRotation.y - 90f ,defaultShipPrefabRotation.z))  : Quaternion.Euler(defaultShipPrefabRotation));
         
         // weird offset that needs to be applied only to 5th ship
-        if (shipIndex == 4) instantiatedShipPrefab.transform.position = new Vector3(isHorizontal ? origin.x - 1f : origin.x, origin.y, isHorizontal ? origin.z : origin.z + 1f);
+        if (shipIndex == 4) instantiatedShipPrefab.transform.position = new Vector3(isHorizontal ? origin.x - 1f : origin.x, origin.y, isHorizontal ? origin.z : origin.z + 1f) + transform.position;
         instantiatedShipPrefab.name = shipNames[shipIndex];
         shipPrefabs[shipIndex] = instantiatedShipPrefab;
     }
@@ -218,7 +218,7 @@ public class BattleshipGridController : MonoBehaviour
        if (isWholeShipSunk)
        {
            ChangeShipMaterial(shipIndex);
-           ChangeTileMaterial(y, x);
+           //ChangeTileMaterial(y, x);
        }
        
    }

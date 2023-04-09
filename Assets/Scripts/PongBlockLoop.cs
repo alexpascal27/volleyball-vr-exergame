@@ -10,7 +10,7 @@ public class PongBlockLoop : MonoBehaviour
     public float hitRegistrationCooldown = 0.5f;
     public float predictionDelay = 0.1f;
    
-    private Rigidbody rigidbody;
+    private Rigidbody rb;
     // make sure no other hit registrations for X sec
     private float coolDownTimer = 0f;
     private float delayTimer = 0f;
@@ -18,7 +18,7 @@ public class PongBlockLoop : MonoBehaviour
     
     private void Start()
     {
-       rigidbody = GetComponent<Rigidbody>();
+       rb = GetComponent<Rigidbody>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -53,8 +53,8 @@ public class PongBlockLoop : MonoBehaviour
     
     Vector3 PredictPositionGivenY( float yCoordinate)
     {
-        Vector3 r0 = rigidbody.position;
-        Vector3 v0 = rigidbody.velocity;
+        Vector3 r0 = rb.position;
+        Vector3 v0 = rb.velocity;
         Vector3 a = new Vector3(0, -9.8f, 0);
         float t0 = (-v0.y + Mathf.Sqrt(Mathf.Pow(v0.y, 2) - 2 * a.y * (r0.y - yCoordinate))) / a.y;
         float t1 = (-v0.y - Mathf.Sqrt(Mathf.Pow(v0.y, 2) - 2 * a.y * (r0.y - yCoordinate))) / a.y;
