@@ -8,10 +8,13 @@ public class PongBlockLoop : MonoBehaviour
 {
     public GameObject targetPrefab;
     public float hitRegistrationCooldown = 0.5f;
+    public float predictionDelay = 0.1f;
    
     private Rigidbody rigidbody;
     // make sure no other hit registrations for X sec
-    private float timer;
+    private float coolDownTimer = 0f;
+    private float delayTimer = 0f;
+    private bool duringDelay = false;
     
     private void Start()
     {
@@ -21,20 +24,33 @@ public class PongBlockLoop : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         GameObject go = collision.gameObject;
-        if (go.CompareTag("Hand") && timer <= 0)
+        if (go.CompareTag("Hand") && coolDownTimer <= 0)
         {
-            timer = hitRegistrationCooldown;
-            Vector3 predictedPosition = PredictPositionGivenY(0.5f);
-            // only spawn receiver on opponent side of court
-            if(!targetPrefab.IsUnityNull() && predictedPosition.z < 0) Instantiate(targetPrefab, predictedPosition + new Vector3(0, 0.6f, 0), targetPrefab.transform.rotation);
+            duringDelay = true;
+            delayTimer = predictionDelay;
         }
     }
 
     private void FixedUpdate()
     {
-        if (timer > 0) timer -= Time.deltaTime;
+        if (coolDownTimer > 0) coolDownTimer -= Time.deltaTime;
+        if (delayTimer > 0) delayTimer -= Time.deltaTime;
+        if (delayTimer <= 0 && duringDelay)
+        {
+            duringDelay = false;
+            PredictAndSpawn();
+        }
     }
 
+    void PredictAndSpawn()
+    {
+        coolDownTimer = hitRegistrationCooldown;
+        Vector3 predictedPosition = PredictPositionGivenY(0.5f);
+        // only spawn receiver on opponent side of court
+        if(!targetPrefab.IsUnityNull() && predictedPosition.z < 0) 
+            Instantiate(targetPrefab, predictedPosition + new Vector3(0, 0.6f, 0), targetPrefab.transform.rotation);
+    }
+    
     Vector3 PredictPositionGivenY( float yCoordinate)
     {
         Vector3 r0 = rigidbody.position;

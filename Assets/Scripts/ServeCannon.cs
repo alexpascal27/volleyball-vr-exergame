@@ -22,6 +22,7 @@ public class ServeCannon : MonoBehaviour
     [SerializeField] public Vector3 maxReceiveErrorRange;
 
     public GameObject targetPrefab;
+    public Vector3 targetSpawnOffset;
     
     private float currTimeCounter;
 
@@ -53,7 +54,7 @@ public class ServeCannon : MonoBehaviour
             rb.velocity = shotPoint.transform.up * power;
             
             Vector3 predictedPosition = PredictPositionGivenY(rb, 0f);
-            if(targetPrefab ) Instantiate(targetPrefab, (receiveMiss ? receiveMissLocation : predictedPosition) + new Vector3(0, 0.6f, 0), targetPrefab.transform.rotation);
+            if(targetPrefab ) Instantiate(targetPrefab, (receiveMiss ? receiveMissLocation : predictedPosition) + targetSpawnOffset, targetPrefab.transform.rotation);
             
             // reset Timer
             currTimeCounter = delay;
