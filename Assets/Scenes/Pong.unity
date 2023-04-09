@@ -1779,6 +1779,21 @@ PrefabInstance:
       propertyPath: maxSuccessAngle.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
+        type: 3}
+      propertyPath: maxReceiveErrorRange.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
+        type: 3}
+      propertyPath: maxReceiveErrorRange.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
+        type: 3}
+      propertyPath: percentageOfReceiveMisses
+      value: 0.579
+      objectReference: {fileID: 0}
     - target: {fileID: 7873307584772717089, guid: 04fa3953f881d754a99a361a191414b1,
         type: 3}
       propertyPath: m_LocalRotation.w

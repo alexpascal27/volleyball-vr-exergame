@@ -16,7 +16,10 @@ public class ServeCannon : MonoBehaviour
     [SerializeField] public Vector3 maxSuccessAngle;
     [SerializeField] public Vector3 maxErrorAngle;
     [SerializeField, Range(0f, 1f)] public float percentageOfMisses = 0f;
-    [SerializeField] public float delay = 2.0f;
+    [SerializeField] public float delay = 2.0f; 
+    // Spawning target offset to where ball will go (for pong receiver location error)
+    [SerializeField, Range(0f, 1f)] public float percentageOfReceiveMisses = 0f;
+    [SerializeField] public Vector3 maxReceiveErrorRange;
 
     public GameObject targetPrefab;
     
@@ -37,7 +40,9 @@ public class ServeCannon : MonoBehaviour
             
             // Randomise angle
             bool miss = DetermineIfToMiss();
+            bool receiveMiss = DetermineIfToReceiveMiss();
             Vector3 rotateVector = GenerateAngles(miss);
+            Vector3 receiveMissLocation = GenerateReceiveMissLocation();
             // Rotate by rotateVector
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + rotateVector);
             // Spawn ball
@@ -48,7 +53,7 @@ public class ServeCannon : MonoBehaviour
             rb.velocity = shotPoint.transform.up * power;
             
             Vector3 predictedPosition = PredictPositionGivenY(rb, 0f);
-            if(targetPrefab) Instantiate(targetPrefab, predictedPosition + new Vector3(0, 0.6f, 0), targetPrefab.transform.rotation);
+            if(targetPrefab ) Instantiate(targetPrefab, (receiveMiss ? receiveMissLocation : predictedPosition) + new Vector3(0, 0.6f, 0), targetPrefab.transform.rotation);
             
             // reset Timer
             currTimeCounter = delay;
@@ -85,7 +90,24 @@ public class ServeCannon : MonoBehaviour
 
         return randomValue <= percentageOfMisses;
     }
+    
+    bool DetermineIfToReceiveMiss()
+    {
+        // randomise between 0 and 1, and see if miss (between 0 and percentageOfMisses) or not
+        float randomValue = UnityEngine.Random.Range(0f, 1f);
 
+        return randomValue <= percentageOfReceiveMisses;
+    }
+
+    Vector3 GenerateReceiveMissLocation()
+    {
+        float x, y, z;
+        x = UnityEngine.Random.Range(- maxReceiveErrorRange.x,  maxReceiveErrorRange.x);
+        y = UnityEngine.Random.Range(- maxReceiveErrorRange.y,  maxReceiveErrorRange.y);
+        z = UnityEngine.Random.Range(0,  maxReceiveErrorRange.z);
+        return new Vector3(x, y, z);
+    }
+    
     float ApplyRetardation()
     {
         float offset = UnityEngine.Random.Range(0f, maxRetardOffset);
