@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class BattleshipGridController : MonoBehaviour
@@ -49,11 +50,11 @@ public class BattleshipGridController : MonoBehaviour
         {
             if (isUser)
             {
-                Debug.Log("Won");
+                SceneManager.LoadScene(4);
             }
             else
             {
-                Debug.Log("Lost");
+                SceneManager.LoadScene(5);
             }
         }
     }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TictactoeGridController : MonoBehaviour
 {
@@ -71,15 +72,15 @@ public class TictactoeGridController : MonoBehaviour
             {
                 if (endState == 0)
                 {
-                    Debug.Log("YOU LOST!!!!");
+                    SceneManager.LoadScene(5);
                 }
                 else if (endState == 1)
                 {
-                    Debug.Log("YOU WON!!!!");
+                    SceneManager.LoadScene(4);
                 }
                 else
                 {
-                    Debug.Log("DRAW");
+                    SceneManager.LoadScene(6);
                 }
             }
                 
