@@ -7,6 +7,9 @@ using Random = UnityEngine.Random;
 
 public class BattleshipGridController : MonoBehaviour
 {
+    private const string BATTLESHIP_USER_SHIP_HITS = "battleshipUserShipHits";
+    private const string BATTLESHIP_OPPONENT_SHIP_HITS = "battleshipOpponentShipHit";
+    
     public bool isUser;
     [SerializeField] private Vector3 gridOrigin = new Vector3(-4.5f, 0.0f, 9.1f);
     // if when moving From A to B, we are decreasing in Z value or not
@@ -232,12 +235,15 @@ public class BattleshipGridController : MonoBehaviour
        if(shipIndex==-1) Debug.LogError("Failure to get ship index");
        shipTileCount[shipIndex] = shipTileCount[shipIndex] - 1;
        hasBeenHitGrid[y, x] = true;
+       if (isUser) IncrementUserShipHits();
+       else IncrementOpponentShipHits();
        
        bool isWholeShipSunk = shipTileCount[shipIndex] == 0;
 
        if (isWholeShipSunk)
        {
            ChangeShipMaterial(shipIndex);
+           // TODO: explosion particle effect
            //ChangeTileMaterial(y, x);
        }
        
@@ -268,6 +274,30 @@ public class BattleshipGridController : MonoBehaviour
        GameObject tilePrefab = gameObject.transform.GetChild(y).GetChild(x).gameObject;
        BattleshipTileController battleshipTileController = tilePrefab.GetComponent<BattleshipTileController>();
        battleshipTileController.ChangeTileMaterialShipSunk();
+   }
+
+   private void IncrementUserShipHits()
+   {
+       int userHits = GetUserShipHits();
+       PlayerPrefs.SetInt(BATTLESHIP_USER_SHIP_HITS, userHits + 1);
+       PlayerPrefs.Save();
+   }
+
+   private void IncrementOpponentShipHits()
+   {
+       int opponentHits = GetOpponentShipHits();
+       PlayerPrefs.SetInt(BATTLESHIP_OPPONENT_SHIP_HITS, opponentHits + 1);
+       PlayerPrefs.Save();
+   }
+
+   private int GetUserShipHits()
+   {
+       return PlayerPrefs.GetInt(BATTLESHIP_USER_SHIP_HITS);
+   }
+
+   private int GetOpponentShipHits()
+   {
+       return PlayerPrefs.GetInt(BATTLESHIP_OPPONENT_SHIP_HITS);
    }
    
 }

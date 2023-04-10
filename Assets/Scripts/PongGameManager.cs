@@ -45,6 +45,7 @@ public class PongGameManager : MonoBehaviour
     {
         int userPoints = GetUserPoints();
         PlayerPrefs.SetInt(PONG_USER_POINTS, userPoints + 1);
+        PlayerPrefs.Save();
         Debug.Log("U-" + (userPoints + 1) + " : O-" + GetOpponentPoints());
     }
 
@@ -52,6 +53,7 @@ public class PongGameManager : MonoBehaviour
     {
         int opponentPoints = GetOpponentPoints();
         PlayerPrefs.SetInt(PONG_OPPONENT_POINTS, opponentPoints + 1);
+        PlayerPrefs.Save();
         Debug.Log("U-" + GetUserPoints() + " : O-" + (opponentPoints + 1));
     }
 
