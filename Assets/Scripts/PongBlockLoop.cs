@@ -6,11 +6,14 @@ using UnityEngine;
 
 public class PongBlockLoop : MonoBehaviour
 {
+    public GameObject pongGameManagerPrefab;
     public GameObject targetPrefab;
     public float hitRegistrationCooldown = 0.5f;
     public float predictionDelay = 0.1f;
    
     private Rigidbody rb;
+    private PongGameManager pongGameManager;
+    private bool incremented = false;
     // make sure no other hit registrations for X sec
     private float coolDownTimer = 0f;
     private float delayTimer = 0f;
@@ -19,6 +22,7 @@ public class PongBlockLoop : MonoBehaviour
     private void Start()
     {
        rb = GetComponent<Rigidbody>();
+       pongGameManager = pongGameManagerPrefab.GetComponent<PongGameManager>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -28,6 +32,26 @@ public class PongBlockLoop : MonoBehaviour
         {
             duringDelay = true;
             delayTimer = predictionDelay;
+        }
+        // If hit floor on opponentSide
+        else if (go.CompareTag("Court"))
+        {
+            if (!incremented)
+            {
+                pongGameManager.IncrementUserPoints();
+                incremented = true;
+            }
+            // TODO: particles
+            Destroy(gameObject);
+        }
+        else if (!go.CompareTag("Net") && transform.position.y < 0.25f)
+        {
+            if (!incremented)
+            {
+                pongGameManager.IncrementOpponentPoints();
+                incremented = true;
+            }
+            Destroy(gameObject);
         }
     }
 
@@ -47,8 +71,8 @@ public class PongBlockLoop : MonoBehaviour
         coolDownTimer = hitRegistrationCooldown;
         Vector3 predictedPosition = PredictPositionGivenY(0.5f);
         // only spawn receiver on opponent side of court
-        if(!targetPrefab.IsUnityNull() && predictedPosition.z < 0) 
-            Instantiate(targetPrefab, predictedPosition + new Vector3(0, 0.6f, 0), targetPrefab.transform.rotation);
+        if(!targetPrefab.IsUnityNull() && predictedPosition.z > 0.05f) 
+            Instantiate(targetPrefab, predictedPosition, targetPrefab.transform.rotation);
     }
     
     Vector3 PredictPositionGivenY( float yCoordinate)

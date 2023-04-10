@@ -128,9 +128,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d67818abf44ffee42a86548c975a39d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pongGameManagerPrefab: {fileID: 6841400507079384432, guid: 76b1a0dcd5e65de41b62bf4046dc69dc,
+    type: 3}
   targetPrefab: {fileID: 4139635946821059049, guid: 7fd5b3ae340ef01408c4d17d4a47414e,
     type: 3}
   hitRegistrationCooldown: 0.5
+  predictionDelay: 0.1
 --- !u!114 &5174837176485359534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,7 +141,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5267061180023506816}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32cbeb9881b1f37459f8bb10efb56a31, type: 3}
   m_Name: 

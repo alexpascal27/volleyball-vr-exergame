@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 1053423130067055058}
   m_Layer: 0
   m_Name: Volleyball_receive
-  m_TagString: Untagged
+  m_TagString: Net
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
