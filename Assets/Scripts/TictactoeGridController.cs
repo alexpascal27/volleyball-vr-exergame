@@ -24,6 +24,22 @@ public class TictactoeGridController : MonoBehaviour
         InitRowNameToIndexDictionary();
         InitEndStates();
     }
+    
+    void PrintGrid()
+    {
+        String arrayString = "Printing Grid:\n";
+        for (int i = 0; i < grid.GetLength(0); i++)
+        {
+            for (int j = 0; j < grid.GetLength(1); j++)
+            {
+                arrayString += grid[i, j] + ", ";
+            }
+
+            arrayString += "\n";
+        }
+
+        Debug.Log(arrayString);
+    }
 
     public bool GetIsUserX()
     {
@@ -70,6 +86,7 @@ public class TictactoeGridController : MonoBehaviour
             int endState = CheckEndState();
             if (endState != -1)
             {
+                PrintGrid();
                 if (endState == 0)
                 {
                     SceneManager.LoadScene(5);
@@ -111,46 +128,31 @@ public class TictactoeGridController : MonoBehaviour
         // check through end states
         for (int i = 0; i < endStates.GetLength(0); i++)
         {
-            // in current loop who is likely to win
-            int state = -1;
+            String[] comboValue = new String[endStates.GetLength(1)];
             for (int j = 0; j < endStates.GetLength(1); j++)
             {
                 Vector2 pointBeingInvestigated = endStates[i, j];
                 String value = grid[(int)pointBeingInvestigated.y, (int)pointBeingInvestigated.x];
-                // If not empty
-                if (!string.IsNullOrEmpty(value))
-                {
-                    // If user
-                    if (value == userString)
-                    {
-                        // if first point then assign state
-                        if (j == 0) state = 1;
-                        // If last point checked and same as state 
-                        else if (state == 1 && j == endStates.GetLength(1) - 1)
-                        {
-                            return 1;
-                        }
-                        else if (state != 1) break;
-                    }
-                    // If opponent
-                    else
-                    {
-                        // if first point then assign state
-                        if (j == 0) state = 0;
-                        // If last point checked and same as state 
-                        else if (state == 0 && j == endStates.GetLength(1) - 1)
-                        {
-                            return 0;
-                        }
-                        else if (state != 0) break;
-                    }
-                }
+                comboValue[j] = value;
             }
+
+            if (AreAllStringValuesTheSame(userString, comboValue)) return 1;
+            if (AreAllStringValuesTheSame(opponentString, comboValue)) return 0;
         }
 
         if (IsGridFull()) return 2;
 
         return -1;
+    }
+
+    bool AreAllStringValuesTheSame(String stringToCheck, String[] stringArr)
+    {
+        for (int i = 0; i < stringArr.GetLength(0); i++)
+        {
+            if (stringArr[i] != stringToCheck) return false;
+        }
+
+        return true;
     }
 
     bool IsGridFull()
