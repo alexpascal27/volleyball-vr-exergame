@@ -10,10 +10,12 @@ public class BallMaterialController : MonoBehaviour
     
     private bool touchedPlayer = false;
     private SphereCollider sphereCollider;
+    private KillAfterXSec killAfterXSec;
     
     private void Start()
     {
         sphereCollider = GetComponent<SphereCollider>();
+        killAfterXSec = GetComponent<KillAfterXSec>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -23,9 +25,9 @@ public class BallMaterialController : MonoBehaviour
         {
             if (!touchedPlayer)
             {
-                Debug.Log("Touched hand for first time");
                 touchedPlayer = true;
                 sphereCollider.material = materialAfterCollision;
+                killAfterXSec.enabled = true;
             }
         }
     }
