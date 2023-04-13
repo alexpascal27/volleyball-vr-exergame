@@ -762,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.18
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -770,7 +770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.46
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -857,6 +857,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 3
   handType: 0
+  limitFromBase: {x: 0, y: 0, z: 0}
+  constraintX: 0
+  constraintZ: 0
 --- !u!114 &413038421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,7 +880,7 @@ MonoBehaviour:
     type: 3}
   userGridPrefab: {fileID: 1592018347}
   userTilePrefab: {fileID: 1820916198}
-  distanceBetweenHandsToTrigger: 1
+  distanceBetweenHandsToTrigger: 0.4
 --- !u!1 &516774857
 GameObject:
   m_ObjectHideFlags: 0
@@ -3369,6 +3372,12 @@ PrefabInstance:
       propertyPath: maxPower
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
+        type: 3}
+      propertyPath: ballPrefab
+      value: 
+      objectReference: {fileID: 5267061180023506816, guid: a0bca0530b74b5943ba1df70f1da9a02,
+        type: 3}
     - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
         type: 3}
       propertyPath: toRetardPower

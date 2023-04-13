@@ -81,7 +81,7 @@ public class BattleshipGridController : MonoBehaviour
                 }
             }
         }
-        PrintGrid();
+        //PrintGrid();
     }
 
     void InitRowNameToIndexDictionary()
@@ -110,7 +110,7 @@ public class BattleshipGridController : MonoBehaviour
             arrayString += "\n";
         }
 
-        //Debug.Log(arrayString);
+        Debug.Log(arrayString);
     }
 
     // Take (x, y) as origin and work out if x + shipSizeX < gridLength AND y + shipSizeY < gridLength
