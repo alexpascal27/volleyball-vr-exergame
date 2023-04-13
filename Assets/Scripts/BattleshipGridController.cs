@@ -110,7 +110,7 @@ public class BattleshipGridController : MonoBehaviour
             arrayString += "\n";
         }
 
-        Debug.Log(arrayString);
+        //Debug.Log(arrayString);
     }
 
     // Take (x, y) as origin and work out if x + shipSizeX < gridLength AND y + shipSizeY < gridLength
@@ -204,7 +204,7 @@ public class BattleshipGridController : MonoBehaviour
        if (!alreadyHit && isHit) RegisterHitToShip(tileCoordinates);
        else
        {
-           Debug.Log("Repeat hit at " + tileName);
+           //Debug.Log("Repeat hit at " + tileName);
        }
 
        return isHit;

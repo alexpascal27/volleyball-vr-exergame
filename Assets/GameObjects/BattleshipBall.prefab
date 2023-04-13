@@ -17,8 +17,9 @@ GameObject:
   - component: {fileID: 2389713665015586772}
   - component: {fileID: 6174333209020356227}
   - component: {fileID: -6809117083520752580}
+  - component: {fileID: 2550892645049348453}
   m_Layer: 3
-  m_Name: Ball
+  m_Name: BattleshipBall
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +97,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5267061180023506816}
-  m_Material: {fileID: 13400000, guid: 07f3501d1ff3688469b1ee7aa445ae35, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -125,7 +126,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5267061180023506816}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32cbeb9881b1f37459f8bb10efb56a31, type: 3}
   m_Name: 
@@ -250,3 +251,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   interactable: {fileID: 0}
+--- !u!114 &2550892645049348453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5267061180023506816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf35819bacc499a98b5e7464486ec18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialAfterCollision: {fileID: 13400000, guid: 07f3501d1ff3688469b1ee7aa445ae35,
+    type: 2}
