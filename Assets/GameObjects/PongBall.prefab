@@ -130,8 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pongGameManagerPrefab: {fileID: 6841400507079384432, guid: 76b1a0dcd5e65de41b62bf4046dc69dc,
     type: 3}
-  targetPrefab: {fileID: 4139635946821059049, guid: 7fd5b3ae340ef01408c4d17d4a47414e,
-    type: 3}
+  targetPrefab: {fileID: 0}
   hitRegistrationCooldown: 0.5
   predictionDelay: 0.1
 --- !u!114 &5174837176485359534

@@ -78,7 +78,7 @@ public class PassCannon : MonoBehaviour
         Vector3 predictedVelocity = PredictVelocityGivenFinalPosition(ballRb, receiveMiss ? GenerateRandomTarget() : targetPoint, timeToGetToTarget);
         ballRb.velocity = predictedVelocity;
         
-        //Instantiate(targetPrefab, targetPoint, targetPrefab.transform.rotation);
+        if(targetPrefab) Instantiate(targetPrefab, targetPoint, targetPrefab.transform.rotation);
         Instantiate(hitterPrefab, targetPoint + hitterPositionOffset, hitterPrefab.transform.rotation);
     }
 

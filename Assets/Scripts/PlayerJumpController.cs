@@ -31,14 +31,14 @@ public class PlayerJumpController : MonoBehaviour
         if (holdingBothTriggers && !jumping && currPlayerHeight <= groundHeight && !holdTriggerLoop)
         {
             jumpCoroutine = StartCoroutine(JumpCoroutine());
-            Debug.Log("Holding both triggers, on ground and not jumping");
+            //Debug.Log("Holding both triggers, on ground and not jumping");
         }
         // If reached max height or leg go of triggers
         if (currPlayerHeight >= maxHeight || (currPlayerHeight > groundHeight && !holdingBothTriggers && jumping))
         {
             StopCoroutine(jumpCoroutine);
             jumping = false;
-            Debug.Log("Already in air, now droppping");
+            //Debug.Log("Already in air, now droppping");
             transform.position = new Vector3(transform.position.x, groundHeight, transform.position.z);
             if (holdingBothTriggers) holdTriggerLoop = true;
         }

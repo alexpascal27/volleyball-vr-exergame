@@ -9,7 +9,7 @@ public class PongBlockLoop : MonoBehaviour
     public GameObject pongGameManagerPrefab;
     public GameObject targetPrefab;
     public float hitRegistrationCooldown = 0.5f;
-    public float predictionDelay = 0.1f;
+    public float predictionDelay = 0.02f;
    
     private Rigidbody rb;
     private PongGameManager pongGameManager;
@@ -28,29 +28,35 @@ public class PongBlockLoop : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         GameObject go = collision.gameObject;
+        //Debug.Log(go.tag);
         if (go.CompareTag("Hand") && coolDownTimer <= 0)
         {
             duringDelay = true;
             delayTimer = predictionDelay;
         }
-        // If hit floor on opponentSide
-        else if (go.CompareTag("Court"))
+        // If hit floor not opponent side
+        else if (go.CompareTag("OutOfCourt"))
         {
             if (!incremented)
             {
-                pongGameManager.IncrementUserPoints();
+                Debug.Log(go.name);
+                pongGameManager.IncrementOpponentPoints();
+                Debug.Log("IncrementOpponentPoints at: " + collision.transform.position);
                 incremented = true;
             }
             // TODO: particles
             Destroy(gameObject);
         }
-        else if (!go.CompareTag("Net") && transform.position.y < 0.25f)
+        else if (!go.CompareTag("Net") && !go.CompareTag("Hand"))
         {
             if (!incremented)
             {
-                pongGameManager.IncrementOpponentPoints();
+                Debug.Log(go.name);
+                pongGameManager.IncrementUserPoints();
+                Debug.Log("IncrementUserPoints at: " + collision.transform.position);
                 incremented = true;
             }
+            // TODO: particles
             Destroy(gameObject);
         }
     }
