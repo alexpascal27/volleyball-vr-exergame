@@ -6562,6 +6562,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: BattleshipGrid
       objectReference: {fileID: 0}
+    - target: {fileID: 599929865913367486, guid: 688114e6562668e428346199e35d1c0d,
+        type: 3}
+      propertyPath: hitExplosionVFXPrefab
+      value: 
+      objectReference: {fileID: 100012, guid: 1f1aa87040db08846a4332981b0a6fa7, type: 3}
+    - target: {fileID: 599929865913367486, guid: 688114e6562668e428346199e35d1c0d,
+        type: 3}
+      propertyPath: sinkExplosionVFXPrefab
+      value: 
+      objectReference: {fileID: 100012, guid: f3a153ef01a92d04dbdf22d8f0dcaa56, type: 3}
     - target: {fileID: 599929865913367487, guid: 688114e6562668e428346199e35d1c0d,
         type: 3}
       propertyPath: m_RootOrder
@@ -6685,6 +6695,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
+        type: 3}
+      propertyPath: delay
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
         type: 3}
@@ -7364,6 +7379,10 @@ MonoBehaviour:
   - {fileID: 6097229148428061550, guid: 8bf42f8d9259a2c40a4b87fa25aa3015, type: 3}
   - {fileID: 4364151855476077146, guid: 679b801d1da83aa409760f706b75a643, type: 3}
   - {fileID: 301916733448693606, guid: c157d0da723b0e94ba9692a9b3585b37, type: 3}
+  hitExplosionVFXPrefab: {fileID: 100012, guid: 1f1aa87040db08846a4332981b0a6fa7,
+    type: 3}
+  sinkExplosionVFXPrefab: {fileID: 100012, guid: f3a153ef01a92d04dbdf22d8f0dcaa56,
+    type: 3}
 --- !u!4 &1233172392
 Transform:
   m_ObjectHideFlags: 0

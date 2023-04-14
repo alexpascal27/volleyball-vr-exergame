@@ -35,7 +35,7 @@ public class BattleshipTileController : MonoBehaviour
             BattleshipGridController battleshipGridController = parentGridPrefab.GetComponent<BattleshipGridController>();
             
             // Tile Feedback
-            bool isHit = battleshipGridController.RegisterHit(tileName);
+            bool isHit = battleshipGridController.RegisterHit(tileName, transform.position);
             ChangeTileMaterial(isHit);
             tileHit = true;
         }

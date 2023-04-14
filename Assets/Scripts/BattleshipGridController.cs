@@ -18,7 +18,9 @@ public class BattleshipGridController : MonoBehaviour
     [SerializeField] private bool xAscending = true;
     [SerializeField] private Material shipSinkMaterial;
     [SerializeField] private GameObject[] shipModelPrefabs;
-    
+
+    public GameObject hitExplosionVFXPrefab;
+    public GameObject sinkExplosionVFXPrefab;
     
     // if [][] = "" unallocated, if [][] = "{ship_name}" then allocated
     private const int GridDimensionsX = 9;
@@ -192,7 +194,7 @@ public class BattleshipGridController : MonoBehaviour
    
    
    // Bool represents ifSuccessfulHit (true if hit, false if not hit)
-   public bool RegisterHit(String tileName)
+   public bool RegisterHit(String tileName, Vector3 tilePosition)
    {
        // y, x
        Tuple<int, int> tileCoordinates = ConvertTileNameToCoordinates(tileName);
@@ -201,7 +203,7 @@ public class BattleshipGridController : MonoBehaviour
 
        bool alreadyHit = hasBeenHitGrid[tileCoordinates.Item1, tileCoordinates.Item2];
        // if new hit
-       if (!alreadyHit && isHit) RegisterHitToShip(tileCoordinates);
+       if (!alreadyHit && isHit) RegisterHitToShip(tileCoordinates, tilePosition);
        else
        {
            //Debug.Log("Repeat hit at " + tileName);
@@ -226,7 +228,7 @@ public class BattleshipGridController : MonoBehaviour
        return !string.IsNullOrEmpty(grid[y, x]);
    }
 
-   void RegisterHitToShip(Tuple<int, int> coordinates)
+   void RegisterHitToShip(Tuple<int, int> coordinates, Vector3 tilePosition)
    {
        int y = coordinates.Item1;
        int x = coordinates.Item2;
@@ -237,13 +239,15 @@ public class BattleshipGridController : MonoBehaviour
        hasBeenHitGrid[y, x] = true;
        if (isUser) IncrementUserShipHits();
        else IncrementOpponentShipHits();
+       Instantiate(hitExplosionVFXPrefab, tilePosition, hitExplosionVFXPrefab.transform.rotation);
        
        bool isWholeShipSunk = shipTileCount[shipIndex] == 0;
 
        if (isWholeShipSunk)
        {
            ChangeShipMaterial(shipIndex);
-           // TODO: explosion particle effect
+           Instantiate(sinkExplosionVFXPrefab, shipPrefabs[shipIndex].transform.position,
+               sinkExplosionVFXPrefab.transform.rotation);
            //ChangeTileMaterial(y, x);
        }
        
