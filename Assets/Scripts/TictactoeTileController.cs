@@ -18,10 +18,13 @@ public class TictactoeTileController : MonoBehaviour
 
         GameObject tilePrefab = gameObject;
         // When collide with ball
-        String collisionGameObjectTag = collision.gameObject.tag;
-        if (collisionGameObjectTag == "Ball")
+        GameObject collisionGameObject = collision.gameObject;
+        if (collisionGameObject.CompareTag("Ball"))
         {
-            CountTileCollisions countTileCollisions = collision.gameObject.GetComponent<CountTileCollisions>();
+            HasTouchedHand hasTouchedHand = collisionGameObject.GetComponent<HasTouchedHand>();
+            bool hasBallTouchedHand = hasTouchedHand.hasTouchedHand;
+            
+            CountTileCollisions countTileCollisions = collisionGameObject.GetComponent<CountTileCollisions>();
             if (countTileCollisions.hasAlreadyHitADifferentTile) return;
 
             // Get parent (row name e.g. A)
@@ -37,7 +40,7 @@ public class TictactoeTileController : MonoBehaviour
 
             // Grid Feedback
             bool isUserTile = entityPrefab.name=="User";
-            bool alreadyHit = tictactoeGridController.RegisterHit(tileName, isUserTile);
+            bool alreadyHit = tictactoeGridController.RegisterHit(tileName, isUserTile, hasBallTouchedHand);
             if (alreadyHit) return;
             // Spawn X or O
             bool isUserX = tictactoeGridController.GetIsUserX();

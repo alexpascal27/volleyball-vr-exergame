@@ -68,8 +68,11 @@ public class TictactoeGridController : MonoBehaviour
         endStates[7, 0] = new Vector2(0, 2); endStates[7, 1] = new Vector2(1, 1); endStates[7, 2] = new Vector2(2, 0);
     }
 
-    public bool RegisterHit(String tileName, bool hitFromUserTile)
+    // Returns if already hit
+    public bool RegisterHit(String tileName, bool hitFromUserTile, bool hasBallTouchedHand)
     {
+        if (!hasBallTouchedHand && hitFromUserTile) return true;
+        
         // y, x
         Tuple<int, int> tileCoordinates = ConvertTileNameToCoordinates(tileName);
 
