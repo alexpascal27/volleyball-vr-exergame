@@ -133,6 +133,8 @@ MonoBehaviour:
   targetPrefab: {fileID: 0}
   hitRegistrationCooldown: 0.5
   predictionDelay: 0.1
+  winningVFX: {fileID: 1961712295026469460, guid: eb8ba5f75a350df47830ffafd3250788,
+    type: 3}
 --- !u!114 &5174837176485359534
 MonoBehaviour:
   m_ObjectHideFlags: 0

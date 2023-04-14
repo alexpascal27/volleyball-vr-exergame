@@ -10,6 +10,7 @@ public class PongBlockLoop : MonoBehaviour
     public GameObject targetPrefab;
     public float hitRegistrationCooldown = 0.5f;
     public float predictionDelay = 0.02f;
+    public GameObject winningVFX;
    
     private Rigidbody rb;
     private PongGameManager pongGameManager;
@@ -28,7 +29,6 @@ public class PongBlockLoop : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         GameObject go = collision.gameObject;
-        //Debug.Log(go.tag);
         if (go.CompareTag("Hand") && coolDownTimer <= 0)
         {
             duringDelay = true;
@@ -39,24 +39,22 @@ public class PongBlockLoop : MonoBehaviour
         {
             if (!incremented)
             {
-                Debug.Log(go.name);
                 pongGameManager.IncrementOpponentPoints();
-                Debug.Log("IncrementOpponentPoints at: " + collision.transform.position);
                 incremented = true;
             }
-            // TODO: particles
+            
             Destroy(gameObject);
         }
         else if (!go.CompareTag("Net") && !go.CompareTag("Hand"))
         {
             if (!incremented)
             {
-                Debug.Log(go.name);
                 pongGameManager.IncrementUserPoints();
-                Debug.Log("IncrementUserPoints at: " + collision.transform.position);
                 incremented = true;
+                Instantiate(winningVFX, transform.position + new Vector3(0,0.1f, 0), winningVFX.transform.rotation);
             }
-            // TODO: particles
+            
+            
             Destroy(gameObject);
         }
     }

@@ -1906,7 +1906,7 @@ PrefabInstance:
     - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
         type: 3}
       propertyPath: percentageOfMisses
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6406875028980018571, guid: 04fa3953f881d754a99a361a191414b1,
         type: 3}
