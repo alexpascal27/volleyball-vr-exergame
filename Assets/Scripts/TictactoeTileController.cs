@@ -9,6 +9,7 @@ public class TictactoeTileController : MonoBehaviour
     public GameObject userTilesPrefab;
     [SerializeField] private GameObject xPrefab;
     [SerializeField] private GameObject oPrefab;
+    public Vector3 oppositeSidePositionOffset;
 
     private bool tileHit = false;
 
@@ -51,7 +52,7 @@ public class TictactoeTileController : MonoBehaviour
             GameObject opponentPrefab = isUserX ? oPrefab : xPrefab;
             Instantiate(isUserTile ? userPrefab : opponentPrefab, transformPosition, xPrefab.transform.rotation, isUserTile ? userTilesPrefab.transform : parentGridPrefab.transform);
             // only spawn opponent side from user tiles
-            Instantiate(isUserTile ? userPrefab : opponentPrefab, new Vector3(isUserTile? transformPosition.x + 15f : transformPosition.x - 15f, transformPosition.y, -transformPosition.z), xPrefab.transform.rotation, isUserX ? userTilesPrefab.transform : entityPrefab.transform);
+            Instantiate(isUserTile ? userPrefab : opponentPrefab, new Vector3(isUserTile? transformPosition.x + 15f : transformPosition.x - 15f, transformPosition.y, -transformPosition.z) + oppositeSidePositionOffset, xPrefab.transform.rotation, isUserX ? userTilesPrefab.transform : entityPrefab.transform);
             tileHit = true;
         }
     }

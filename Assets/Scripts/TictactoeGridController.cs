@@ -7,6 +7,11 @@ using UnityEngine.SceneManagement;
 public class TictactoeGridController : MonoBehaviour
 {
     [SerializeField] private bool isUserX = true;
+    public GameObject confettiCannonPrefab;
+    private Vector3 confettiCannonRightPosition = new Vector3(2.5f, 1.5f, -2f);
+    private Vector3 confettiCannonLeftPosition = new Vector3(-2.5f, 1.5f, -2f);
+    private Vector3 confettiCannonRightRotation = new Vector3(-45f, -90, 90);
+    private Vector3 confettiCannonLeftRotation = new Vector3(-135f, -90, 90);
     
     private const int GridDimensionsX = 3;
     private const int GridDimensionsY = 3;
@@ -71,6 +76,7 @@ public class TictactoeGridController : MonoBehaviour
     // Returns if already hit
     public bool RegisterHit(String tileName, bool hitFromUserTile, bool hasBallTouchedHand)
     {
+        Debug.Log(tileName + " hasTouchedHand: " + hasBallTouchedHand + "   hitFromUserTile: " + hitFromUserTile);
         if (!hasBallTouchedHand && hitFromUserTile) return true;
         
         // y, x
@@ -80,6 +86,16 @@ public class TictactoeGridController : MonoBehaviour
         // if new hit
         if (!alreadyHit)
         {
+            if (hitFromUserTile)
+            {
+                // Spawn particles
+                    // left
+                Instantiate(confettiCannonPrefab, confettiCannonLeftPosition,Quaternion.Euler(confettiCannonLeftRotation));
+                    // right
+                Instantiate(confettiCannonPrefab, confettiCannonRightPosition,Quaternion.Euler(confettiCannonRightRotation));
+            }
+            
+            
             hasBeenHitGrid[tileCoordinates.Item1, tileCoordinates.Item2] = true;
             String userString = isUserX ? "X" : "O";
             String opponentString = isUserX ? "O" : "X";
